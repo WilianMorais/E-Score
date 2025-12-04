@@ -1,0 +1,67 @@
+$cor-verde: #00e640;
+$cor-verde-escuro: #00b934;
+
+.seletor-esporte {
+  position: relative;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.botao-esporte {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.texto-esporte {
+  text-transform: uppercase;
+}
+
+.icone-seta {
+  font-size: 12px;
+  transition: transform 0.15s ease;
+}
+
+.icone-seta.aberto {
+  transform: rotate(180deg);
+}
+
+
+.lista-esportes {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  min-width: 200px;
+  background: #ffffff;
+  color: #333333;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  z-index: 1000;
+}
+
+.item-esporte {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.item-esporte:hover {
+  background: rgba(0, 230, 64, 0.08);
+}
+
+.item-esporte.selecionado {
+  background: rgba(0, 230, 64, 0.16);
+  color: $cor-verde-escuro;
+  font-weight: 600;
+}

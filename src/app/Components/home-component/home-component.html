@@ -1,0 +1,62 @@
+<div class="pagina-inicial">
+  <header class="barra-superior">
+    <div class="barra-superior-esquerda">
+      <div class="marca-circulo">W</div>
+      <app-select (esporteAlterado)="onEsporteAlterado($event)"></app-select>
+    </div>
+
+    <div class="barra-superior-direita">
+      <span class="saldo">0,00 BRL</span>
+    </div>
+  </header>
+
+  <nav class="abas">
+    <button
+      class="aba"
+      [class.ativa]="abaAtual === 'jogos'"
+      (click)="alterarAba('jogos')"
+    >
+      Jogos
+    </button>
+
+    <button
+      class="aba"
+      [class.ativa]="abaAtual === 'campeonatos'"
+      (click)="alterarAba('campeonatos')"
+    >
+      Campeonatos
+    </button>
+
+    <button
+      class="aba"
+      [class.ativa]="abaAtual === 'equipes'"
+      (click)="alterarAba('equipes')"
+    >
+      Equipes
+    </button>
+  </nav>
+
+  <main class="conteudo">
+    <ng-container [ngSwitch]="abaAtual">
+      <section *ngSwitchCase="'jogos'">
+        </section>
+          <app-campeonatos *ngSwitchCase="'campeonatos'"></app-campeonatos>
+        <section *ngSwitchCase="'equipes'">
+      </section>
+    </ng-container>
+  </main>
+
+  <nav class="barra-inferior">
+    <button class="item-inferior ativo">Home</button>
+    <button class="item-inferior">Ao Vivo</button>
+
+    <div class="item-inferior-centro">
+      <div class="circulo-centro">
+        <img src="assets/e-score.png" alt="Logo E" />
+      </div>
+    </div>
+
+    <button class="item-inferior">Favoritos</button>
+    <button class="item-inferior">Notícias</button>
+  </nav>
+</div>
