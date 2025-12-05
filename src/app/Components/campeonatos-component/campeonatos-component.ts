@@ -10,11 +10,17 @@ interface Pais {
   favorito: boolean;
 }
 
+interface GrupoLigas {
+  regiao: string;
+  ligas: Ligas[];
+}
+
 interface Ligas {
   nome: string;
   slug: string;
   logoCampeonato: string;
   ligaFavorita: boolean;
+  regiao: string;
 }
 
 @Component({
@@ -98,8 +104,64 @@ export class CampeonatosComponent {
   }
 
   campeonatos: Ligas[] = [
-    { nome: 'Brasileirão Série A',        slug: 'brasileirao',        logoCampeonato: 'assets/campeonatos/brasil/brasileiro-serieA-logo.png',        ligaFavorita: false },
-    { nome: 'Campeonato Argentino de Futebol',        slug: 'argentino',        logoCampeonato: 'assets/campeonatos/argentina/liga-argentina-logo.png',        ligaFavorita: false },
+    { nome: 'Bundesliga',                         slug: 'bundesliga',      logoCampeonato: 'assets/campeonatos/alemanha/bundesliga-logo.png',            ligaFavorita: false,      regiao: 'Europa' },
+    { nome: '2.Bundesliga',                       slug: 'bundesliga2',     logoCampeonato: 'assets/campeonatos/alemanha/bundesliga-b-logo.png',          ligaFavorita: false,      regiao: 'Europa' },
+    { nome: '3. Liga',                            slug: 'liga3',           logoCampeonato: 'assets/campeonatos/alemanha/liga3-logo.png',                 ligaFavorita: false,      regiao: 'Europa' },
+    { nome: 'Liga Profissional Saudita',          slug: 'ligaSaudita',     logoCampeonato: 'assets/campeonatos/arabia/liga1-logo.png',                   ligaFavorita: false,      regiao: 'Ásia'  },
+    { nome: 'Liga da Primeira Divisão Saudita',   slug: 'ligaSauditaB',    logoCampeonato: 'assets/campeonatos/arabia/liga2-logo.png',                   ligaFavorita: false,      regiao: 'Ásia'  },
+    { nome: 'Campeonato Argentino de Futebol',    slug: 'argentino',       logoCampeonato: 'assets/campeonatos/argentina/liga-argentina-logo.png',       ligaFavorita: false,      regiao: 'América do Sul'  },   
+    { nome: 'Primeira Nacional',                  slug: 'argentinoB',      logoCampeonato: 'assets/campeonatos/argentina/liga-argentina2-logo.png',      ligaFavorita: false,      regiao: 'América do Sul'  }, 
+    { nome: 'A League',                           slug: 'australiano',     logoCampeonato: 'assets/campeonatos/australia/a-liga-logo.png',               ligaFavorita: false,      regiao: 'Oceania'  },
+    { nome: 'Liga Jupiler',                       slug: 'campBelgaA',      logoCampeonato: 'assets/campeonatos/belgica/belga-logo.png',                  ligaFavorita: false,      regiao: 'Europa'  },  
+    { nome: 'Challenger Pro League',              slug: 'campBelgaB',      logoCampeonato: 'assets/campeonatos/belgica/belga2-logo.png',                 ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Division Profesional',               slug: 'boliviano',       logoCampeonato: 'assets/campeonatos/bolivia/bolivia-liga1-logo.png',          ligaFavorita: false,      regiao: 'América do Sul'  },  
+    { nome: 'Brasileirão Série A',                slug: 'brasileiraoA',    logoCampeonato: 'assets/campeonatos/brasil/brasileiro-serieA-logo.png',       ligaFavorita: false,      regiao: 'América do Sul'  },
+    { nome: 'Brasileirão Série B',                slug: 'brasileiraoB',    logoCampeonato: 'assets/campeonatos/brasil/brasileiro-serieB-logo.png',       ligaFavorita: false,      regiao: 'América do Sul'  },
+    { nome: 'Liga de Primera',                    slug: 'campChilenoA',    logoCampeonato: 'assets/campeonatos/chile/liga-primera-logo.png',             ligaFavorita: false,      regiao: 'América do Sul'  },
+    { nome: 'Liga de Acesso',                     slug: 'campChilenoB',    logoCampeonato: 'assets/campeonatos/chile/liga-acesso-logo.png',              ligaFavorita: false,      regiao: 'América do Sul'  },
+    { nome: 'Super Liga Chinesa',                 slug: 'superLiga',       logoCampeonato: 'assets/campeonatos/china/superliga-logo.png',                ligaFavorita: false,      regiao: 'Ásia'  },
+    { nome: 'Liga Um',                            slug: 'ligaUm',          logoCampeonato: 'assets/campeonatos/china/liga1-logo.png',                    ligaFavorita: false,      regiao: 'Ásia'  },
+    { nome: 'Categora Primera A',                 slug: 'colombiano',      logoCampeonato: 'assets/campeonatos/colombia/categoriaA-logo.png',            ligaFavorita: false,      regiao: 'América do Sul'  },
+    { nome: 'K League 1',                         slug: 'coreiaK1',        logoCampeonato: 'assets/campeonatos/coreiadosul/k1-logo.png',                 ligaFavorita: false,      regiao: 'Ásia'  },
+    { nome: 'K League 2',                         slug: 'coreiaK2',        logoCampeonato: 'assets/campeonatos/coreiadosul/k2-logo.png',                 ligaFavorita: false,      regiao: 'Ásia'  },
+    { nome: 'MAXtv Prva Liga',                    slug: 'croata',          logoCampeonato: 'assets/campeonatos/croacia/max-logo.png',                    ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Super Liga',                         slug: 'dinamarques1',    logoCampeonato: 'assets/campeonatos/dinamarca/divisao1-logo.png',             ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: '1° Divisão',                         slug: 'dinamarques2',    logoCampeonato: 'assets/campeonatos/dinamarca/superliga-logo.png',            ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Premier League',                     slug: 'egipcio',         logoCampeonato: 'assets/campeonatos/egito/pl1-logo.png',                      ligaFavorita: false,      regiao: 'África'  },
+    { nome: 'UAE Pro League',                     slug: 'uae',             logoCampeonato: 'assets/campeonatos/arabesunidos/uae-logo.png',               ligaFavorita: false,      regiao: 'Ásia'  },
+    { nome: 'Liga Pro',                           slug: 'equatoriano',     logoCampeonato: 'assets/campeonatos/equador/liga-pro-logo.png',               ligaFavorita: false,      regiao: 'América do Sul'  },
+    { nome: 'Premiership League',                 slug: 'escocia',         logoCampeonato: 'assets/campeonatos/escocia/premiership-logo.png',            ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'La Liga',                            slug: 'espanhol1',       logoCampeonato: 'assets/campeonatos/espanha/laliga-logo.png',                 ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'La Liga Hypermotion',                slug: 'espanhol2',       logoCampeonato: 'assets/campeonatos/espanha/laliga2-logo.png',                ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Major League Soccer - MLS',          slug: 'mls',             logoCampeonato: 'assets/campeonatos/eua/mls-logo.png',                        ligaFavorita: false,      regiao: 'América do Norte'  },
+    { nome: 'USL Championship',                   slug: 'usl',             logoCampeonato: 'assets/campeonatos/eua/usl-logo.png',                        ligaFavorita: false,      regiao: 'América do Norte'  },
+    { nome: 'Ligue 1',                            slug: 'ligue1',          logoCampeonato: 'assets/campeonatos/franca/ligue1-logo.png',                  ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Ligue 2',                            slug: 'ligue2',          logoCampeonato: 'assets/campeonatos/franca/ligue2-logo.png',                  ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Super League Greece',                slug: 'grego',           logoCampeonato: 'assets/campeonatos/grecia/sleague-logo.png',                 ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Premier League',                     slug: 'ingles1',         logoCampeonato: 'assets/campeonatos/inglaterra/premier-logo.png',             ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'EFL Championship',                   slug: 'ingles2',         logoCampeonato: 'assets/campeonatos/inglaterra/efl-logo.png',                 ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Serie A - Tim',                      slug: 'italiano1',       logoCampeonato: 'assets/campeonatos/italia/seriea-logo.png',                  ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Serie B',                            slug: 'italiano2',       logoCampeonato: 'assets/campeonatos/italia/serieb-logo.png',                  ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'J1 League',                          slug: 'japones1',        logoCampeonato: 'assets/campeonatos/japao/j1-logo.png',                       ligaFavorita: false,      regiao: 'Ásia'  },
+    { nome: 'J2 League',                          slug: 'japones2',        logoCampeonato: 'assets/campeonatos/japao/j2-logo.png',                       ligaFavorita: false,      regiao: 'Ásia'  },
+    { nome: 'Botola Pro',                         slug: 'marroquino',      logoCampeonato: 'assets/campeonatos/marrocos/botola-logo.png',                ligaFavorita: false,      regiao: 'África'  },
+    { nome: 'Liga MX',                            slug: 'mexicano1',       logoCampeonato: 'assets/campeonatos/mexico/mx-logo.png',                      ligaFavorita: false,      regiao: 'América do Norte'  },
+    { nome: 'Liga MX Expansion',                  slug: 'mexicano2',       logoCampeonato: 'assets/campeonatos/mexico/mx-expansion-logo.png',            ligaFavorita: false,      regiao: 'América do Norte'  },
+    { nome: 'Eredivisie',                         slug: 'holandes1',       logoCampeonato: 'assets/campeonatos/holanda/eredivisie-logo.png',             ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Erste Divisie',                      slug: 'holandes2',       logoCampeonato: 'assets/campeonatos/holanda/2divisao-logo.png',               ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Primera División Paraguay',          slug: 'paraguaio1',      logoCampeonato: 'assets/campeonatos/paraguai/primera-logo.png',               ligaFavorita: false,      regiao: 'América do Sul'  },
+    { nome: 'División Intermedia',                slug: 'paraguaio2',      logoCampeonato: 'assets/campeonatos/paraguai/intermedia-logo.png',            ligaFavorita: false,      regiao: 'América do Sul'  },
+    { nome: 'Liga 1',                             slug: 'peruano',         logoCampeonato: 'assets/campeonatos/peru/liga1-logo.png',                     ligaFavorita: false,      regiao: 'América do Sul'  },
+    { nome: 'Primeira Liga',                      slug: 'portugues1',      logoCampeonato: 'assets/campeonatos/portugal/primeira-logo.png',              ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Segunda Liga',                       slug: 'portugues2',      logoCampeonato: 'assets/campeonatos/portugal/segunda-logo.png',               ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Qatar Stars League',                 slug: 'stars',           logoCampeonato: 'assets/campeonatos/qatar/stars-logo.png',                    ligaFavorita: false,      regiao: 'Ásia'  },
+    { nome: 'Russian Prmier League',              slug: 'russo',           logoCampeonato: 'assets/campeonatos/russia/russian-logo.png',                 ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Swiss Super League',                 slug: 'suico',           logoCampeonato: 'assets/campeonatos/suica/swiss-logo.png',                    ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Ligue 1',                            slug: 'campLeague',      logoCampeonato: 'assets/campeonatos/tunisia/ligue1-logo.png',                 ligaFavorita: false,      regiao: 'África'  },
+    { nome: 'Super Lig',                          slug: 'turco',           logoCampeonato: 'assets/campeonatos/turquia/super-logo.png',                  ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Ukrainin Premier League',            slug: 'ucraniano',       logoCampeonato: 'assets/campeonatos/ucrania/liga1-logo.png',                  ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Primera Division Uruguaya',          slug: 'uruguaio',        logoCampeonato: 'assets/campeonatos/uruguai/primera-logo.png',                ligaFavorita: false,      regiao: 'América do Sul'  },
+    { nome: 'Primera División Venezolana',        slug: 'venezuelano',     logoCampeonato: 'assets/campeonatos/venezuela/primera-logo.png',              ligaFavorita: false,      regiao: 'América do Sul'  },
   ]
 
   get ligasOrdenadas(): Ligas[] {
@@ -111,6 +173,23 @@ export class CampeonatosComponent {
         if (!texto) return true; 
         return this.normalizar(ligas.nome).includes(texto);
       });
+  }
+
+  get ligasPorRegiao(): GrupoLigas[] {
+  const ligasFiltradas = this.ligasOrdenadas;
+  const mapa = new Map<string, Ligas[]>();
+  for (const liga of ligasFiltradas) {
+    const chave = liga.regiao || 'Outras ligas';
+    if (!mapa.has(chave)) {
+      mapa.set(chave, []);}
+        mapa.get(chave)!.push(liga);}
+    return Array.from(mapa.entries()).map(([regiao, ligas]) => ({
+      regiao,
+      ligas,
+    }))
+    .sort((a, b) =>
+      this.normalizar(a.regiao).localeCompare(this.normalizar(b.regiao))
+    );
   }
 
    abrirLiga(liga: Ligas): void {

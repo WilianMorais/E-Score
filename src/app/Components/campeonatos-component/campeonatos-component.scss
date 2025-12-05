@@ -119,7 +119,7 @@ $cor-borda: #dddddd;
   gap: 10px;
 }
 
-.bandeira-campeonato, .bandeira-pais {
+.lista-paises img.bandeira-pais {
   width: 24px;
   height: 16px;
   flex: 0 0 24px;
@@ -128,9 +128,13 @@ $cor-borda: #dddddd;
   border-radius: 3px;
 }
 
-.lista-ligas img, .lista-paises img {
-  max-width: none;
-  max-height: none;
+.lista-ligas img.bandeira-campeonato {
+  width: 22px;
+  height: auto;
+  max-width: 40px;
+  display: block;
+  object-fit: contain;
+  border-radius: 3px;
 }
 
 .nome-liga, .nome-pais {
@@ -146,6 +150,13 @@ $cor-borda: #dddddd;
   font-size: 20px;
   line-height: 1;
   color: #777777;
+}
+
+.titulo-grupo-ligas {
+  font-size: 18px;
+  font-weight: 700;
+  color: $cor-verde;
+  margin: 20px 15px 20px; 
 }
 
 .botao-favorito.favorito {

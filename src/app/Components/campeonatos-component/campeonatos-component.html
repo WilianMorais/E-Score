@@ -35,6 +35,7 @@
         *ngFor="let pais of paisesOrdenados"
         (click)="abrirPais(pais)"
       >
+
       <div class="pais-esquerda">
         <img class="bandeira-pais" [src]="pais.bandeira" [alt]="pais.nome" />
         <span class="nome-pais">{{ pais.nome }}</span>
@@ -51,27 +52,33 @@
 </div>
 
 
-  <div class="lista-ligas" *ngIf="filtroAtivo === 'ligas'">
-    <div
+<div class="lista-ligas" *ngIf="filtroAtivo === 'ligas'">
+  <div class="grupo-ligas" *ngFor="let grupo of ligasPorRegiao">
+    <h3 class="titulo-grupo-ligas">
+      {{ grupo.regiao }}
+    </h3><div
       class="card-ligas"
-      *ngFor="let campeonatos of ligasOrdenadas"
+      *ngFor="let campeonatos of grupo.ligas"
       (click)="abrirLiga(campeonatos)"
-     >
-       <div class="ligas-esquerda">
-         <img class="bandeira-campeonato" [src]="campeonatos.logoCampeonato" [alt]="campeonatos.nome" />
-         <span class="nome-liga">{{ campeonatos.nome }}</span>
-        </div>
+    >
+      <div class="ligas-esquerda">
+        <img
+          class="bandeira-campeonato"
+          [src]="campeonatos.logoCampeonato"
+          [alt]="campeonatos.nome"
+        />
+        <span class="nome-liga">{{ campeonatos.nome }}</span>
+      </div>
 
-       <button
-         class="botao-favorito"
-         [class.favorito]="campeonatos.ligaFavorita"
-         (click)="trocarFavorito(campeonatos); $event.stopPropagation()"
-        >
+      <button
+        class="botao-favorito"
+        [class.favorito]="campeonatos.ligaFavorita"
+        (click)="trocarFavorito(campeonatos); $event.stopPropagation()"
+      >
         ☆
       </button>
     </div>
   </div>
 </div>
 
-
-</div>
+</div></div>
