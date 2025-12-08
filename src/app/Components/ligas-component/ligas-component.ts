@@ -92,6 +92,7 @@ export class LigasComponent implements OnInit {
   private readonly dadosEquipes: equipesDados[] = [
     //Brasileirão Série A//
     { nome:'Chapecoense',           slug:'acf',    escudo:'assets/campeonatos/brasil/equipes/chape.png',       equipeFav:false,  campeonato:'brasileiraoA' },
+    { nome:'Grêmio',                slug:'gre',    escudo:'assets/campeonatos/brasil/equipes/gremio.png',      equipeFav:false,  campeonato:'brasileiraoA' },
     { nome:'Santos',                slug:'sfc',    escudo:'assets/campeonatos/brasil/equipes/santos.png',      equipeFav:false,  campeonato:'brasileiraoA' },
     { nome:'São Paulo',             slug:'spfc',   escudo:'assets/campeonatos/brasil/equipes/spaulo.png',      equipeFav:false,  campeonato:'brasileiraoA' },
     { nome:'Remo',                  slug:'remo',   escudo:'assets/campeonatos/brasil/equipes/remo.png',        equipeFav:false,  campeonato:'brasileiraoA' },
@@ -133,6 +134,29 @@ export class LigasComponent implements OnInit {
     { nome:'São Bernardo',          slug:'sbo',    escudo:'assets/campeonatos/brasil/equipes/saobernardo.png', equipeFav:false,  campeonato:'brasileiraoB' },
     { nome:'Londrina',              slug:'lon',    escudo:'assets/campeonatos/brasil/equipes/londrina.png',    equipeFav:false,  campeonato:'brasileiraoB' },
     { nome:'Náutico',               slug:'nau',    escudo:'assets/campeonatos/brasil/equipes/nautico.png',     equipeFav:false,  campeonato:'brasileiraoB' },
+    
+    //Premier League - Egito//
+    { nome:'Ceramica Cleopatra',    slug:'cec',    escudo:'assets/campeonatos/egito/equipes/ceramica.png',     equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'Pyramids',              slug:'pyr',    escudo:'assets/campeonatos/egito/equipes/pyramids.png',     equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'Al Ahly SC',            slug:'aas',    escudo:'assets/campeonatos/egito/equipes/ahly.png',         equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'Zamalek SC',            slug:'zam',    escudo:'assets/campeonatos/egito/equipes/zamalek.png',      equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'Al Masry',              slug:'ama',    escudo:'assets/campeonatos/egito/equipes/masry.png',        equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'Wadi Degla',            slug:'wad',    escudo:'assets/campeonatos/egito/equipes/degla.png',        equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'Zed FC',                slug:'zfc',    escudo:'assets/campeonatos/egito/equipes/zed.png',          equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'ENPPI',                 slug:'enp',    escudo:'assets/campeonatos/egito/equipes/enppi.png',        equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'Petrojet',              slug:'pet',    escudo:'assets/campeonatos/egito/equipes/petrojet.png',     equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'El Gouna',              slug:'elg',    escudo:'assets/campeonatos/egito/equipes/gouna.png',        equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'National Bank Of Egypt',slug:'nbe',    escudo:'assets/campeonatos/egito/equipes/national.png',     equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'Modern Sport FC',       slug:'mod',    escudo:'assets/campeonatos/egito/equipes/modern.png',       equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'Ghazi El-Mehalla',      slug:'gha',    escudo:'assets/campeonatos/egito/equipes/ghazi.png',        equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'Smouha',                slug:'smo',    escudo:'assets/campeonatos/egito/equipes/smouha.png',       equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'Haras El Hodoodo',      slug:'har',    escudo:'assets/campeonatos/egito/equipes/hodoodo.png',      equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'Pharco',                slug:'pha',    escudo:'assets/campeonatos/egito/equipes/pharco.png',       equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'El Geish',              slug:'elg',    escudo:'assets/campeonatos/egito/equipes/geish.png',        equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'AL Mokawloon',          slug:'alm',    escudo:'assets/campeonatos/egito/equipes/mokaw.png',        equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'Ismaily',               slug:'ism',    escudo:'assets/campeonatos/egito/equipes/ismaily.png',      equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'Al Ittihad',            slug:'ali',    escudo:'assets/campeonatos/egito/equipes/ittihad.png',      equipeFav:false,  campeonato:'egipcio'      },
+    { nome:'Kahrbaa Alasmalia',     slug:'kah',    escudo:'assets/campeonatos/egito/equipes/kahrbaa.png',      equipeFav:false,  campeonato:'egipcio'      },
 
     //Ligue 1 - Tunisia//
     { nome:'Espérance',             slug:'esp',    escudo:'assets/campeonatos/tunisia/equipes/esperance.png',  equipeFav:false,  campeonato:'campLeague'   },
