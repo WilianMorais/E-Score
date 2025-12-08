@@ -1,0 +1,164 @@
+<div class="pagina-pais" *ngIf="pais as p">
+  <header class="barra-superior">
+    <div class="barra-superior-esquerda">
+      <button
+        class="btn-voltar-topo"
+        (click)="voltar()"
+        aria-label="Voltar para países"
+      >
+        ‹
+      </button>
+
+      <div class="marca-circulo">W</div>
+      <span class="marca-titulo">FUTEBOL</span>
+    </div>
+
+    <div class="barra-superior-direita">
+      <span class="saldo">0,00 BRL</span>
+    </div>
+  </header>
+
+  <nav class="abas abas-pais">
+    <button
+      class="aba"
+      [class.ativa]="abaAtiva === 'ligas'"
+      (click)="selecionarAba('ligas')"
+    >
+      Principais Ligas
+    </button>
+
+    <button
+      class="aba"
+      [class.ativa]="abaAtiva === 'copas'"
+      (click)="selecionarAba('copas')"
+    >
+      Principais Copas
+    </button>
+  </nav>
+
+  <main class="conteudo-pais">
+    <div class="cabecalho-pais">
+      <div class="info-pais">
+        <img
+          class="bandeira-pais"
+          [src]="p.bandeira"
+          [alt]="p.nome"
+        />
+        <h1 class="nome-pais">{{ p.nome }}</h1>
+      </div>
+
+      <div class="campo-pesquisa-pais">
+        <span class="icone-pesquisa">🔍</span>
+        <input
+          type="text"
+          placeholder="Ex. Competição"
+          [(ngModel)]="termoBusca"
+        />
+      </div>
+    </div>
+
+    <section
+      class="lista-competicoes"
+      *ngIf="abaAtiva === 'ligas'"
+    >
+      <div
+        class="card-competicao"
+        *ngFor="let liga of ligasFiltradas"
+        (click)="abrirLiga(liga)"
+      >
+        <div class="competicao-esquerda">
+          <img
+            class="logo-competicao"
+            [src]="liga.logo"
+            [alt]="liga.nome"
+          />
+          <div class="texto-competicao">
+            <div class="nome-competicao">
+              {{ liga.nome }}
+            </div>
+            <div class="temporada-competicao">
+              {{ liga.temporada }}
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="botao-favorito"
+          [class.favorito]="liga.favorito"
+          (click)="alternarFavorito(liga); $event.stopPropagation()"
+          aria-label="Marcar liga como favorita"
+        >
+          ☆
+        </button>
+      </div>
+
+      <div
+        class="mensagem-vazia"
+        *ngIf="ligasFiltradas.length === 0"
+      >
+        Nenhuma liga encontrada para esse filtro.
+      </div>
+    </section>
+
+    <section
+      class="lista-competicoes"
+      *ngIf="abaAtiva === 'copas'"
+    >
+      <div
+        class="card-competicao"
+        *ngFor="let copa of copasFiltradas"
+      >
+        <div class="competicao-esquerda">
+          <img
+            class="logo-competicao"
+            [src]="copa.logo"
+            [alt]="copa.nome"
+          />
+          <div class="texto-competicao">
+            <div class="nome-competicao">
+              {{ copa.nome }}
+            </div>
+            <div class="temporada-competicao">
+              {{ copa.temporada }}
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="botao-favorito"
+          [class.favorito]="copa.favorito"
+          (click)="alternarFavorito(copa)"
+          aria-label="Marcar copa como favorita"
+        >
+          ☆
+        </button>
+      </div>
+
+      <div
+        class="mensagem-vazia"
+        *ngIf="copasFiltradas.length === 0"
+      >
+        Nenhuma copa encontrada para esse filtro.
+      </div>
+    </section>
+  </main>
+
+  <nav class="barra-inferior">
+    <button
+      class="item-inferior ativo"
+      (click)="irParaHome()"
+    >
+      Home
+    </button>
+    <button class="item-inferior">Ao Vivo</button>
+
+    <div class="item-inferior-centro">
+      <div class="circulo-centro">
+        <img src="assets/e-score.png" alt="Logo E" />
+      </div>
+    </div>
+
+    <button class="item-inferior">Favoritos</button>
+    <button class="item-inferior">Notícias</button>
+  </nav>
+</div>

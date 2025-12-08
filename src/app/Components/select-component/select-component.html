@@ -1,0 +1,27 @@
+<div class="seletor-esporte" (mouseleave)="fecharMenu()">
+  <button
+    class="botao-esporte"
+    type="button"
+    (click)="alternarMenu()"
+    aria-haspopup="listbox"
+    [attr.aria-expanded]="menuAberto"
+  >
+    <span class="texto-esporte">{{ esporteAtual | uppercase }}</span>
+    <span class="icone-seta" [class.aberto]="menuAberto">▾</span>
+  </button>
+
+  <ul
+    class="lista-esportes"
+    *ngIf="menuAberto"
+    role="listbox"
+  >
+    <li
+      *ngFor="let esporte of esportes"
+      class="item-esporte"
+      (click)="selecionarEsporte(esporte)"
+      [class.selecionado]="esporte === esporteAtual"
+    >
+      {{ esporte }}
+    </li>
+  </ul>
+</div>

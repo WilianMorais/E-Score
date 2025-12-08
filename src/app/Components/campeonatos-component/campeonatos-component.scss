@@ -1,0 +1,213 @@
+$cor-verde: #00b934;
+$cor-borda: #dddddd;
+$cor-fundo-cinza: #f5f5f5;
+
+:host {
+  flex: 1;
+  display: flex;
+  min-height: 0;             
+}
+
+.pagina-campeonatos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 16px 24px 0;       
+}
+
+.barra-filtro-campeonatos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 25px;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+}
+
+.grupo-botoes-filtro {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.botao-filtro {
+  padding: 10px 26px;
+  border-radius: 10px;
+  border: 1px solid $cor-borda;
+  background: #ffffff;
+  color: #555555;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 15px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.botao-filtro.ativo {
+  background: $cor-verde;
+  border-color: $cor-verde;
+  color: #ffffff;
+}
+
+.campo-pesquisa-campeonatos {
+  margin-left: auto;
+  width: 350px;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-top: 15px;
+  border: 1px solid $cor-borda;
+  padding: 10px 20px;
+}
+
+.icone-pesquisa {
+  font-size: 14px;
+  margin-right: 6px;
+  color: #999999;
+}
+
+.campo-pesquisa-campeonatos input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  font-family: inherit;
+  color: #444444;
+}
+
+.campo-pesquisa-campeonatos input::placeholder {
+  color: #aaaaaa;
+}
+
+.mensagem-vazia {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 16px;
+  color: #777777;
+}
+
+.area-scroll-campeonatos {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-bottom: 80px;      
+}
+
+.lista-ligas, .lista-paises {
+  margin-top: 8px;
+}
+
+.card-ligas, .card-pais {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $cor-fundo-cinza;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.ligas-esquerda, .pais-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lista-paises img.bandeira-pais {
+  width: 24px;
+  height: 16px;
+  flex: 0 0 24px;
+  display: block;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.lista-ligas img.bandeira-campeonato {
+  width: 22px;
+  height: auto;
+  max-width: 40px;
+  display: block;
+  object-fit: contain;
+  border-radius: 3px;
+}
+
+.nome-liga, .nome-pais {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.botao-favorito {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  color: #777777;
+}
+
+.titulo-grupo-ligas {
+  font-size: 18px;
+  font-weight: 700;
+  color: $cor-verde;
+  margin: 20px 15px 20px; 
+}
+
+.botao-favorito.favorito {
+  color: #ffb300;
+}
+
+@media (max-width: 768px) {
+  .pagina-campeonatos {
+    padding: 12px 12px 0;                
+  }
+
+  .barra-filtro-campeonatos {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .grupo-botoes-filtro {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .botao-filtro {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .campo-pesquisa-campeonatos {
+    margin: 0;
+    width: 100%;
+  }
+
+  .area-scroll-campeonatos {
+    padding-bottom: 72px;                
+  }
+
+  .card-ligas, .card-pais {
+    padding: 8px 10px;
+  }
+
+  .nome-liga, .nome-pais {
+    font-size: 13px;
+  }
+
+  .bandeira-campeonato, .bandeira-pais {
+    width: 22px;
+    height: 15px;
+  }
+
+}

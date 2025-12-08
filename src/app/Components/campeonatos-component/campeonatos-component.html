@@ -1,0 +1,84 @@
+<div class="pagina-campeonatos">
+  <div class="barra-filtro-campeonatos">
+    <div class="grupo-botoes-filtro">
+      <button
+        class="botao-filtro"
+        [class.ativo]="filtroAtivo === 'paises'"
+        (click)="selecionarFiltro('paises')"
+      >
+        Países
+      </button>
+
+      <button
+        class="botao-filtro"
+        [class.ativo]="filtroAtivo === 'ligas'"
+        (click)="selecionarFiltro('ligas')"
+      >
+        Ligas
+      </button>
+    </div>
+
+    <div class="campo-pesquisa-campeonatos">
+      <span class="icone-pesquisa">🔍</span>
+      <input
+        type="text"
+        placeholder="Ex. Time ou País"
+        [(ngModel)]="termoBusca"
+      />
+    </div>
+  </div>
+
+  <div class="area-scroll-campeonatos">
+    <div class="lista-paises" *ngIf="filtroAtivo === 'paises'">
+      <div
+        class="card-pais"
+        *ngFor="let pais of paisesOrdenados"
+        (click)="abrirPais(pais)"
+      >
+
+      <div class="pais-esquerda">
+        <img class="bandeira-pais" [src]="pais.bandeira" [alt]="pais.nome" />
+        <span class="nome-pais">{{ pais.nome }}</span>
+      </div>
+
+      <button
+        class="botao-favorito"
+        [class.favorito]="pais.favorito"
+        (click)="alternarFavorito(pais); $event.stopPropagation()"
+      >
+      ☆
+    </button>
+  </div>
+</div>
+
+
+<div class="lista-ligas" *ngIf="filtroAtivo === 'ligas'">
+  <div class="grupo-ligas" *ngFor="let grupo of ligasPorRegiao">
+    <h3 class="titulo-grupo-ligas">
+      {{ grupo.regiao }}
+    </h3><div
+      class="card-ligas"
+      *ngFor="let campeonatos of grupo.ligas"
+      (click)="abrirLiga(campeonatos)"
+    >
+      <div class="ligas-esquerda">
+        <img
+          class="bandeira-campeonato"
+          [src]="campeonatos.logoCampeonato"
+          [alt]="campeonatos.nome"
+        />
+        <span class="nome-liga">{{ campeonatos.nome }}</span>
+      </div>
+
+      <button
+        class="botao-favorito"
+        [class.favorito]="campeonatos.ligaFavorita"
+        (click)="trocarFavorito(campeonatos); $event.stopPropagation()"
+      >
+        ☆
+      </button>
+    </div>
+  </div>
+</div>
+
+</div></div>

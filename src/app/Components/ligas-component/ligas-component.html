@@ -1,0 +1,67 @@
+<div class="pagina-ligas">
+  <header class="barra-superior">
+    <div class="barra-superior-esquerda">
+      <button
+        class="btn-voltar-topo"
+        (click)="voltar()"
+        aria-label="Voltar para países">
+    ‹
+      </button>
+      <div class="marca-circulo">W</div>
+      <span class="marca-titulo">FUTEBOL</span>
+    </div>
+    <div class="barra-superior-direita">
+      <span class="saldo">0,00 BRL</span>
+    </div>
+  </header>
+
+  <main class="conteudo-ligas">
+    <div class="barra-filtro-equipes">
+      <h2 class="titulo-campeonato">
+        {{ ligaNome }}
+      </h2>
+
+      <div class="campo-pesquisa-equipes">
+        <span class="icone-pesquisa">🔍</span>
+        <input
+          type="text"
+          placeholder="Ex. Equipe"
+          [(ngModel)]="buscaEquipe"
+        />
+      </div>
+    </div>
+
+    <div class="conteudo-campeonato" *ngIf="ligaSlug">
+      <div *ngIf="equipesFiltradas.length; else semEquipes">
+        <div class="card-equipe" *ngFor="let equipe of equipesFiltradas">
+          <div class="card-equipe-escudo">
+            <img [src]="equipe.escudo" [alt]="equipe.nome" />
+          </div>
+          <div class="card-equipe-info">
+            <span class="card-equipe-nome">{{ equipe.nome }}</span>
+          </div>
+        </div>
+      </div>
+
+      <ng-template #semEquipes>
+        <p class="mensagem-sem-equipes">
+          Nenhuma equipe cadastrada para este campeonato ainda.
+        </p>
+      </ng-template>
+    </div>
+  </main>
+
+  <nav class="barra-inferior">
+    <button class="item-inferior ativo">Home</button>
+    <button class="item-inferior">Ao Vivo</button>
+
+    <div class="item-inferior-centro">
+      <div class="circulo-centro">
+        <img src="assets/e-score.png" alt="Logo E" />
+      </div>
+    </div>
+
+    <button class="item-inferior">Favoritos</button>
+    <button class="item-inferior">Notícias</button>
+  </nav>
+</div>

@@ -1,0 +1,117 @@
+$cor-verde: #00e640;
+
+.tela-carregamento {
+  height: 100vh;     
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; 
+  background: #ffffff;
+}
+
+.logo-principal {
+  margin-top: 150px;   
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.logo-principal img {
+  width: 350px;         
+  height: auto;
+}
+
+.logo-e {
+  font-size: 140px;
+  font-weight: 900;
+  line-height: 1;
+  color: $cor-verde;
+  text-shadow: 0 6px 10px rgba(0, 230, 64, 0.45);
+}
+
+.logo-score {
+  margin-top: 8px;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: $cor-verde;
+  text-transform: uppercase;
+  text-shadow: 0 3px 6px rgba(0, 230, 64, 0.4);
+}
+
+.carregador-inferior {
+  margin-bottom: 40px;
+  animation: flutuar 1.6s ease-in-out infinite;
+}
+
+.circulo-externo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid rgba(0, 230, 64, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.circulo-externo::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 4px solid rgba(0, 230, 64, 0.55);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  animation: girar 1s linear infinite;
+}
+
+.circulo-interno {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #eaffef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 0 4px rgba(0, 230, 64, 0.05),
+    0 8px 14px rgba(0, 230, 64, 0.45);
+}
+
+.circulo-interno img {
+  width: 30px;         
+  height: auto;
+  object-fit: contain;
+  animation: pulsar 1.2s ease-in-out infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes flutuar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulsar {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
