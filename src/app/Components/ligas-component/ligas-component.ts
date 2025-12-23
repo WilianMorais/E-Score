@@ -90,7 +90,7 @@ export class LigasComponent implements OnInit {
 
 
   private readonly dadosEquipes: equipesDados[] = [
-    //Brasileirão Série A//
+    //Brasileirão Série A
     { nome:'Chapecoense',           slug:'acf',    escudo:'assets/campeonatos/brasil/equipes/chape.png',       equipeFav:false,  campeonato:'brasileiraoA' },
     { nome:'Grêmio',                slug:'gre',    escudo:'assets/campeonatos/brasil/equipes/gremio.png',      equipeFav:false,  campeonato:'brasileiraoA' },
     { nome:'Santos',                slug:'sfc',    escudo:'assets/campeonatos/brasil/equipes/santos.png',      equipeFav:false,  campeonato:'brasileiraoA' },
@@ -113,7 +113,7 @@ export class LigasComponent implements OnInit {
     { nome:'Coritiba',              slug:'cfc',    escudo:'assets/campeonatos/brasil/equipes/coxa.png',        equipeFav:false,  campeonato:'brasileiraoA' },
     { nome:'Internacional',         slug:'sci',    escudo:'assets/campeonatos/brasil/equipes/inter.png',       equipeFav:false,  campeonato:'brasileiraoA' },
     
-    //Brasileirão Série B//
+    //Brasileirão Série B
     { nome:'Criciúma',              slug:'cri',    escudo:'assets/campeonatos/brasil/equipes/criciuma.png',    equipeFav:false,  campeonato:'brasileiraoB' },
     { nome:'Goiás',                 slug:'goi',    escudo:'assets/campeonatos/brasil/equipes/goias.png',       equipeFav:false,  campeonato:'brasileiraoB' },
     { nome:'Novorizontino',         slug:'nov',    escudo:'assets/campeonatos/brasil/equipes/novorizontino.png',equipeFav:false,  campeonato:'brasileiraoB' },
@@ -135,7 +135,7 @@ export class LigasComponent implements OnInit {
     { nome:'Londrina',              slug:'lon',    escudo:'assets/campeonatos/brasil/equipes/londrina.png',    equipeFav:false,  campeonato:'brasileiraoB' },
     { nome:'Náutico',               slug:'nau',    escudo:'assets/campeonatos/brasil/equipes/nautico.png',     equipeFav:false,  campeonato:'brasileiraoB' },
     
-    //Premier League - Egito//
+    //Premier League - Egito
     { nome:'Ceramica Cleopatra',    slug:'cec',    escudo:'assets/campeonatos/egito/equipes/ceramica.png',     equipeFav:false,  campeonato:'egipcio'      },
     { nome:'Pyramids',              slug:'pyr',    escudo:'assets/campeonatos/egito/equipes/pyramids.png',     equipeFav:false,  campeonato:'egipcio'      },
     { nome:'Al Ahly SC',            slug:'aas',    escudo:'assets/campeonatos/egito/equipes/ahly.png',         equipeFav:false,  campeonato:'egipcio'      },
@@ -158,7 +158,7 @@ export class LigasComponent implements OnInit {
     { nome:'Al Ittihad',            slug:'ali',    escudo:'assets/campeonatos/egito/equipes/ittihad.png',      equipeFav:false,  campeonato:'egipcio'      },
     { nome:'Kahrbaa Alasmalia',     slug:'kah',    escudo:'assets/campeonatos/egito/equipes/kahrbaa.png',      equipeFav:false,  campeonato:'egipcio'      },
 
-    //Ligue 1 - Tunisia//
+    //Ligue 1 - Tunisia
     { nome:'Espérance',             slug:'esp',    escudo:'assets/campeonatos/tunisia/equipes/esperance.png',  equipeFav:false,  campeonato:'campLeague'   },
     { nome:'Club Africain',         slug:'afr',    escudo:'assets/campeonatos/tunisia/equipes/africain.png',   equipeFav:false,  campeonato:'campLeague'   },
     { nome:'Stade Tunisien',        slug:'sta',    escudo:'assets/campeonatos/tunisia/equipes/stade.png',      equipeFav:false,  campeonato:'campLeague'   },
@@ -176,7 +176,7 @@ export class LigasComponent implements OnInit {
     { nome:'Olimpique Béja',        slug:'olb',    escudo:'assets/campeonatos/tunisia/equipes/beja.png',       equipeFav:false,  campeonato:'campLeague'   },
     { nome:'AS Gabés',              slug:'asg',    escudo:'assets/campeonatos/tunisia/equipes/gabes.png',      equipeFav:false,  campeonato:'campLeague'   },
 
-    //Liga MX//
+    //Liga MX
     { nome:'Toluca',                slug:'tol',    escudo:'assets/campeonatos/mexico/equipes/toluca.png',      equipeFav:false,  campeonato:'mexicano1'    },
     { nome:'Tigres',                slug:'tig',    escudo:'assets/campeonatos/mexico/equipes/tigres.png',      equipeFav:false,  campeonato:'mexicano1'    },
     { nome:'Cruz Azul',             slug:'cla',    escudo:'assets/campeonatos/mexico/equipes/cruz.png',        equipeFav:false,  campeonato:'mexicano1'    },
@@ -195,6 +195,26 @@ export class LigasComponent implements OnInit {
     { nome:'Mazatlan FC',           slug:'maz',    escudo:'assets/campeonatos/mexico/equipes/mazatlan.png',    equipeFav:false,  campeonato:'mexicano1'    },
     { nome:'Leon',                  slug:'leo',    escudo:'assets/campeonatos/mexico/equipes/leon.png',        equipeFav:false,  campeonato:'mexicano1'    },
     { nome:'Puebla',                slug:'pue',    escudo:'assets/campeonatos/mexico/equipes/puebla.png',      equipeFav:false,  campeonato:'mexicano1'    },
+
+    //Liga MX Expansion
+    { nome:'Atlante',               slug:'atl',    escudo:'assets/campeonatos/mexico/equipes/atlante.png',     equipeFav:false,  campeonato:'mexicano2'    },
+    { nome:'Cancún FC',             slug:'can',    escudo:'assets/campeonatos/mexico/equipes/cancun.png',      equipeFav:false,  campeonato:'mexicano2'    },
+    { nome:'Jaiba Brava',           slug:'jai',    escudo:'assets/campeonatos/mexico/equipes/jaiba.png',       equipeFav:false,  campeonato:'mexicano2'    },
+    { nome:'Irapuato',              slug:'ira',    escudo:'assets/campeonatos/mexico/equipes/irapuato.png',    equipeFav:false,  campeonato:'mexicano2'    },
+    { nome:'Mineros De Zacatecas',  slug:'miz',    escudo:'assets/campeonatos/mexico/equipes/mineros.png',     equipeFav:false,  campeonato:'mexicano2'    },
+    { nome:'Leones Negros',         slug:'len',    escudo:'assets/campeonatos/mexico/equipes/leones.png',      equipeFav:false,  campeonato:'mexicano2'    },
+    { nome:'Atlético Morelia',      slug:'atm',    escudo:'assets/campeonatos/mexico/equipes/morelia.png',     equipeFav:false,  campeonato:'mexicano2'    },
+    { nome:'Tepatitlán de Morelos', slug:'tem',    escudo:'assets/campeonatos/mexico/equipes/tepatitlan.png',  equipeFav:false,  campeonato:'mexicano2'    },
+    { nome:'Venados',               slug:'ven',    escudo:'assets/campeonatos/mexico/equipes/venados.png',     equipeFav:false,  campeonato:'mexicano2'    },
+    { nome:'Atletico La Paz',       slug:'atp',    escudo:'assets/campeonatos/mexico/equipes/lapaz.png',       equipeFav:false,  campeonato:'mexicano2'    },
+    { nome:'CD Tapatío',            slug:'cdt',    escudo:'assets/campeonatos/mexico/equipes/tepatio.png',     equipeFav:false,  campeonato:'mexicano2'    },
+    { nome:'Tlaxcala',              slug:'tla',    escudo:'assets/campeonatos/mexico/equipes/tlaxcala.png',    equipeFav:false,  campeonato:'mexicano2'    },
+    { nome:'Oaxaca',                slug:'oax',    escudo:'assets/campeonatos/mexico/equipes/oaxaca.png',      equipeFav:false,  campeonato:'mexicano2'    },
+    { nome:'Correcaminos',          slug:'cor',    escudo:'assets/campeonatos/mexico/equipes/correcaminos.png',equipeFav:false,  campeonato:'mexicano2'    },
+    { nome:'Dorados de Sinaloa',    slug:'dos',    escudo:'assets/campeonatos/mexico/equipes/dorados.png',     equipeFav:false,  campeonato:'mexicano2'    },
+
+    //Liga MX Expansion
+    { nome:'Philadelphia Union',    slug:'phi',    escudo:'assets/campeonatos/eua/equipes/philadelphia.png',   equipeFav:false,  campeonato:'mls'          },
 
     //Botola Pro
     { nome:'Wydad AC',              slug:'wyd',    escudo:'assets/campeonatos/marrocos/equipes/wydad.png',     equipeFav:false,  campeonato:'marroquino'   },
