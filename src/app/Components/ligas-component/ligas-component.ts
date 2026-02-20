@@ -61,7 +61,8 @@ export class LigasComponent implements OnInit {
     espanhol2: 'La Liga Hypermotion',
     mlso: 'Major League Soccer - MLS - Conferência Oeste',
     mlsl: 'Major League Soccer - MLS - Conferência Leste',
-    usl: 'USL Championship',
+    uslo: 'USL Championship - Conferência Oeste',
+    usll: 'USL Championship - Conferência Leste',
     ligue1: 'Ligue 1',
     ligue2: 'Ligue 2',
     grego: 'Super League Greece',
@@ -93,6 +94,25 @@ export class LigasComponent implements OnInit {
 
 
   private readonly dadosEquipes: equipesDados[] = [
+
+    //Botola Pro
+    { nome:'Wydad AC',              slug:'wyd',    escudo:'assets/campeonatos/marrocos/equipes/wydad.png',     equipeFav:false,  campeonato:'marroquino'   },
+    { nome:'AS FAR',                slug:'far',    escudo:'assets/campeonatos/marrocos/equipes/asfar.png',     equipeFav:false,  campeonato:'marroquino'   },
+    { nome:'Maghreb Fès',           slug:'mag',    escudo:'assets/campeonatos/marrocos/equipes/maghred.png',   equipeFav:false,  campeonato:'marroquino'   },
+    { nome:'Raja Casablanca',       slug:'raj',    escudo:'assets/campeonatos/marrocos/equipes/raja.png',      equipeFav:false,  campeonato:'marroquino'   },
+    { nome:'CODM Meknes',           slug:'cod',    escudo:'assets/campeonatos/marrocos/equipes/codm.png',      equipeFav:false,  campeonato:'marroquino'   },
+    { nome:'RSB',                   slug:'rsb',    escudo:'assets/campeonatos/marrocos/equipes/rsb.png',       equipeFav:false,  campeonato:'marroquino'   },
+    { nome:'Olympique Dcheira',     slug:'oly',    escudo:'assets/campeonatos/marrocos/equipes/olympique.png', equipeFav:false,  campeonato:'marroquino'   },
+    { nome:'El Jadida',             slug:'elj',    escudo:'assets/campeonatos/marrocos/equipes/jadida.png',    equipeFav:false,  campeonato:'marroquino'   },
+    { nome:'Ittihad Tanger',        slug:'itt',    escudo:'assets/campeonatos/marrocos/equipes/ittihad.png',   equipeFav:false,  campeonato:'marroquino'   },
+    { nome:'CR Khemis Zemamra',     slug:'crk',    escudo:'assets/campeonatos/marrocos/equipes/khemis.png',    equipeFav:false,  campeonato:'marroquino'   },
+    { nome:'Hassania Agadir',       slug:'has',    escudo:'assets/campeonatos/marrocos/equipes/hassana.png',   equipeFav:false,  campeonato:'marroquino'   },
+    { nome:'Kawkab Marrakech',      slug:'kwm',    escudo:'assets/campeonatos/marrocos/equipes/kawkab.png',    equipeFav:false,  campeonato:'marroquino'   },
+    { nome:'FUS Rabat',             slug:'fus',    escudo:'assets/campeonatos/marrocos/equipes/rabat.png',     equipeFav:false,  campeonato:'marroquino'   },
+    { nome:'Union Yacoub El Mansour',slug:'uym',   escudo:'assets/campeonatos/marrocos/equipes/mansour.png',   equipeFav:false,  campeonato:'marroquino'   },
+    { nome:'US Touarga',            slug:'ust',    escudo:'assets/campeonatos/marrocos/equipes/touarga.png',   equipeFav:false,  campeonato:'marroquino'   },
+    { nome:'Olympique Safi',        slug:'osa',    escudo:'assets/campeonatos/marrocos/equipes/safi.png',      equipeFav:false,  campeonato:'marroquino'   },
+
     //Brasileirão Série A
     { nome:'Chapecoense',           slug:'acf',    escudo:'assets/campeonatos/brasil/equipes/chape.png',       equipeFav:false,  campeonato:'brasileiraoA' },
     { nome:'Grêmio',                slug:'gre',    escudo:'assets/campeonatos/brasil/equipes/gremio.png',      equipeFav:false,  campeonato:'brasileiraoA' },
@@ -249,24 +269,7 @@ export class LigasComponent implements OnInit {
     { nome:'Sporting KC',           slug:'skc',    escudo:'assets/campeonatos/eua/equipes/sporting.png',       equipeFav:false,  campeonato:'mlso'          },
     { nome:'St. Louis City SC',     slug:'slc',    escudo:'assets/campeonatos/eua/equipes/louiscity.png',      equipeFav:false,  campeonato:'mlso'          },
     { nome:'Whitecaps',             slug:'whi',    escudo:'assets/campeonatos/eua/equipes/whitecaps.png',      equipeFav:false,  campeonato:'mlso'          },
-
-    //Botola Pro
-    { nome:'Wydad AC',              slug:'wyd',    escudo:'assets/campeonatos/marrocos/equipes/wydad.png',     equipeFav:false,  campeonato:'marroquino'   },
-    { nome:'AS FAR',                slug:'far',    escudo:'assets/campeonatos/marrocos/equipes/asfar.png',     equipeFav:false,  campeonato:'marroquino'   },
-    { nome:'Maghreb Fès',           slug:'mag',    escudo:'assets/campeonatos/marrocos/equipes/maghred.png',   equipeFav:false,  campeonato:'marroquino'   },
-    { nome:'Raja Casablanca',       slug:'raj',    escudo:'assets/campeonatos/marrocos/equipes/raja.png',      equipeFav:false,  campeonato:'marroquino'   },
-    { nome:'CODM Meknes',           slug:'cod',    escudo:'assets/campeonatos/marrocos/equipes/codm.png',      equipeFav:false,  campeonato:'marroquino'   },
-    { nome:'RSB',                   slug:'rsb',    escudo:'assets/campeonatos/marrocos/equipes/rsb.png',       equipeFav:false,  campeonato:'marroquino'   },
-    { nome:'Olympique Dcheira',     slug:'oly',    escudo:'assets/campeonatos/marrocos/equipes/olympique.png', equipeFav:false,  campeonato:'marroquino'   },
-    { nome:'El Jadida',             slug:'elj',    escudo:'assets/campeonatos/marrocos/equipes/jadida.png',    equipeFav:false,  campeonato:'marroquino'   },
-    { nome:'Ittihad Tanger',        slug:'itt',    escudo:'assets/campeonatos/marrocos/equipes/ittihad.png',   equipeFav:false,  campeonato:'marroquino'   },
-    { nome:'CR Khemis Zemamra',     slug:'crk',    escudo:'assets/campeonatos/marrocos/equipes/khemis.png',    equipeFav:false,  campeonato:'marroquino'   },
-    { nome:'Hassania Agadir',       slug:'has',    escudo:'assets/campeonatos/marrocos/equipes/hassana.png',   equipeFav:false,  campeonato:'marroquino'   },
-    { nome:'Kawkab Marrakech',      slug:'kwm',    escudo:'assets/campeonatos/marrocos/equipes/kawkab.png',    equipeFav:false,  campeonato:'marroquino'   },
-    { nome:'FUS Rabat',             slug:'fus',    escudo:'assets/campeonatos/marrocos/equipes/rabat.png',     equipeFav:false,  campeonato:'marroquino'   },
-    { nome:'Union Yacoub El Mansour',slug:'uym',   escudo:'assets/campeonatos/marrocos/equipes/mansour.png',   equipeFav:false,  campeonato:'marroquino'   },
-    { nome:'US Touarga',            slug:'ust',    escudo:'assets/campeonatos/marrocos/equipes/touarga.png',   equipeFav:false,  campeonato:'marroquino'   },
-    { nome:'Olympique Safi',        slug:'osa',    escudo:'assets/campeonatos/marrocos/equipes/safi.png',      equipeFav:false,  campeonato:'marroquino'   },
+    
   ];
 
   equipesLiga: equipesDados[] = [];

@@ -512,7 +512,14 @@ export class PaisComponent {
           tipo: 'liga',
         },
         {
-          nome: 'USL Championship',
+          nome: 'USL Championship - Conferência Leste',
+          temporada: '2024/25',
+          logo: 'assets/campeonatos/eua/usl-logo.png',
+          favorito: false,
+          tipo: 'liga',
+        },
+        {
+          nome: 'USL Championship - Conferência Oeste',
           temporada: '2024/25',
           logo: 'assets/campeonatos/eua/usl-logo.png',
           favorito: false,
@@ -1085,7 +1092,8 @@ export class PaisComponent {
     'estados-unidos': {
       'Major League Soccer - MLS - Conferência Oeste': 'mlso',
       'Major League Soccer - MLS - Conferência Leste': 'mlsl',
-      'USL Championship': 'usl',
+      'USL Championship - Conferência Oeste': 'uslo',
+      'USL Championship - Conferência Leste': 'usll',
     },
     franca: {
       'Ligue 1': 'ligue1',
