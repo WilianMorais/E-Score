@@ -11,6 +11,8 @@ interface equipesDados {
   equipeFav: boolean;
 }
 
+
+
 @Component({
   selector: 'app-ligas-component',
   standalone: true,
@@ -57,7 +59,8 @@ export class LigasComponent implements OnInit {
     escocia: 'Premiership League',
     espanhol1: 'La Liga',
     espanhol2: 'La Liga Hypermotion',
-    mls: 'Major League Soccer - MLS',
+    mlso: 'Major League Soccer - MLS - Conferência Oeste',
+    mlsl: 'Major League Soccer - MLS - Conferência Leste',
     usl: 'USL Championship',
     ligue1: 'Ligue 1',
     ligue2: 'Ligue 2',
@@ -213,8 +216,39 @@ export class LigasComponent implements OnInit {
     { nome:'Correcaminos',          slug:'cor',    escudo:'assets/campeonatos/mexico/equipes/correcaminos.png',equipeFav:false,  campeonato:'mexicano2'    },
     { nome:'Dorados de Sinaloa',    slug:'dos',    escudo:'assets/campeonatos/mexico/equipes/dorados.png',     equipeFav:false,  campeonato:'mexicano2'    },
 
-    //Liga MX Expansion
-    { nome:'Philadelphia Union',    slug:'phi',    escudo:'assets/campeonatos/eua/equipes/philadelphia.png',   equipeFav:false,  campeonato:'mls'          },
+    //MLS - Leste
+    { nome:'Philadelphia Union',    slug:'phi',    escudo:'assets/campeonatos/eua/equipes/philadelphia.png',   equipeFav:false,  campeonato:'mlsl'          },
+    { nome:'Atlanta United',        slug:'atl',    escudo:'assets/campeonatos/eua/equipes/atlanta.png',        equipeFav:false,  campeonato:'mlsl'          },
+    { nome:'Charlotte FC',          slug:'cha',    escudo:'assets/campeonatos/eua/equipes/charlotte.png',      equipeFav:false,  campeonato:'mlsl'          },
+    { nome:'Chicago Fire',          slug:'chi',    escudo:'assets/campeonatos/eua/equipes/chicago.png',        equipeFav:false,  campeonato:'mlsl'          },
+    { nome:'FC Cincinnati',         slug:'fcc',    escudo:'assets/campeonatos/eua/equipes/cincinnati.png',     equipeFav:false,  campeonato:'mlsl'          },
+    { nome:'Columbus Crew',         slug:'coc',    escudo:'assets/campeonatos/eua/equipes/columbus.png',       equipeFav:false,  campeonato:'mlsl'          },
+    { nome:'DC United',             slug:'dcu',    escudo:'assets/campeonatos/eua/equipes/dcunited.png',       equipeFav:false,  campeonato:'mlsl'          },
+    { nome:'Inter Miami',           slug:'inm',    escudo:'assets/campeonatos/eua/equipes/intermiami.png',     equipeFav:false,  campeonato:'mlsl'          },
+    { nome:'CF Montréal',           slug:'cfm',    escudo:'assets/campeonatos/eua/equipes/montreal.png',       equipeFav:false,  campeonato:'mlsl'          },
+    { nome:'Nashville SC',          slug:'nsc',    escudo:'assets/campeonatos/eua/equipes/nashville.png',      equipeFav:false,  campeonato:'mlsl'          },
+    { nome:'Revolution',            slug:'rev',    escudo:'assets/campeonatos/eua/equipes/revolution.png',     equipeFav:false,  campeonato:'mlsl'          },
+    { nome:'New York City FC',      slug:'nyc',    escudo:'assets/campeonatos/eua/equipes/newyorkcity.png',    equipeFav:false,  campeonato:'mlsl'          },
+    { nome:'N.Y Red Bull',          slug:'nrb',    escudo:'assets/campeonatos/eua/equipes/nyredbull.png',      equipeFav:false,  campeonato:'mlsl'          },
+    { nome:'Orlando City',          slug:'orl',    escudo:'assets/campeonatos/eua/equipes/orlando.png',        equipeFav:false,  campeonato:'mlsl'          },
+    { nome:'Toronto',               slug:'tor',    escudo:'assets/campeonatos/eua/equipes/toronto.png',        equipeFav:false,  campeonato:'mlsl'          },
+
+    //MLS - Oeste
+    { nome:'Austin FC',             slug:'aus',    escudo:'assets/campeonatos/eua/equipes/austin.png',         equipeFav:false,  campeonato:'mlso'          },
+    { nome:'Colorado Rapids',       slug:'cor',    escudo:'assets/campeonatos/eua/equipes/colorado.png',       equipeFav:false,  campeonato:'mlso'          },
+    { nome:'FC Dallas',             slug:'fcd',    escudo:'assets/campeonatos/eua/equipes/dallas.png',         equipeFav:false,  campeonato:'mlso'          },
+    { nome:'Houston Dynamo',        slug:'hod',    escudo:'assets/campeonatos/eua/equipes/houston.png',        equipeFav:false,  campeonato:'mlso'          },
+    { nome:'La Galaxy',             slug:'lag',    escudo:'assets/campeonatos/eua/equipes/lagalaxy.png',       equipeFav:false,  campeonato:'mlso'          },
+    { nome:'Los Angeles FC',        slug:'lfc',    escudo:'assets/campeonatos/eua/equipes/lafc.png',           equipeFav:false,  campeonato:'mlso'          },
+    { nome:'Minnesota United',      slug:'min',    escudo:'assets/campeonatos/eua/equipes/minnesota.png',      equipeFav:false,  campeonato:'mlso'          },
+    { nome:'Portland',              slug:'por',    escudo:'assets/campeonatos/eua/equipes/portland.png',       equipeFav:false,  campeonato:'mlso'          },
+    { nome:'Real Salt Lake',        slug:'rsl',    escudo:'assets/campeonatos/eua/equipes/reallake.png',       equipeFav:false,  campeonato:'mlso'          },
+    { nome:'San Jose',              slug:'sjo',    escudo:'assets/campeonatos/eua/equipes/sanjose.png',        equipeFav:false,  campeonato:'mlso'          },
+    { nome:'San Diego FC',          slug:'sdf',    escudo:'assets/campeonatos/eua/equipes/sandiego.png',       equipeFav:false,  campeonato:'mlso'          },
+    { nome:'Seattle Sounders',      slug:'sso',    escudo:'assets/campeonatos/eua/equipes/seatle.png',         equipeFav:false,  campeonato:'mlso'          },
+    { nome:'Sporting KC',           slug:'skc',    escudo:'assets/campeonatos/eua/equipes/sporting.png',       equipeFav:false,  campeonato:'mlso'          },
+    { nome:'St. Louis City SC',     slug:'slc',    escudo:'assets/campeonatos/eua/equipes/louiscity.png',      equipeFav:false,  campeonato:'mlso'          },
+    { nome:'Whitecaps',             slug:'whi',    escudo:'assets/campeonatos/eua/equipes/whitecaps.png',      equipeFav:false,  campeonato:'mlso'          },
 
     //Botola Pro
     { nome:'Wydad AC',              slug:'wyd',    escudo:'assets/campeonatos/marrocos/equipes/wydad.png',     equipeFav:false,  campeonato:'marroquino'   },
