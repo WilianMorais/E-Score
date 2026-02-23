@@ -1,0 +1,214 @@
+:host {
+  display: block;
+}
+
+.pagina-login {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ====== ESQUERDA ====== */
+.coluna-esquerda {
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(16px, 3vw, 48px);
+}
+
+.marca {
+  text-align: center;
+  user-select: none;
+}
+
+.logo {
+  margin-top: 0;   
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.logo img {
+  width: 350px;         
+  height: auto;
+}
+
+.nome-marca {
+  margin-top: 14px;
+  font-size: clamp(44px, 5vw, 72px);
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #13d10a;
+  text-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* ====== DIREITA ====== */
+.coluna-direita {
+  background: #13d10a;
+  display: grid;
+  place-items: center;
+  padding: clamp(16px, 3vw, 48px);
+}
+
+.painel {
+  width: min(520px, 92vw);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 18px;
+}
+
+.campo label {
+  display: block;
+  margin: 0 0 8px 6px;
+  padding-left: 6px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 44px;
+  border-radius: 8px;
+  border: 0;
+  outline: none;
+  padding: 0 14px;
+  font-size: 15px;
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+input:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35), 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+input.invalido {
+  box-shadow: 0 0 0 3px rgba(255, 60, 60, 0.35), 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.ajuda {
+  display: block;
+  margin: 6px 0 0 0;
+  padding-left: 6px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Senha */
+.senha-wrapper {
+  position: relative;
+}
+
+.senha-wrapper input {
+  padding-right: 110px;
+}
+
+.botao-mostrar {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 32px;
+  border: 0;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+.botao-mostrar:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.35);
+  outline-offset: 2px;
+}
+
+/* Ações */
+.linha-acoes {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+.link {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 13px;
+  padding: 6px 0;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.alerta {
+  background: rgba(0, 0, 0, 0.18);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+/* Botões */
+.botao-primario {
+  height: 44px;
+  border-radius: 10px;
+  border: 0;
+  background: #ffffff;
+  color: #0b7f06;
+  font-weight: 900;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.20);
+}
+
+.botao-primario:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.botao-secundario {
+  height: 44px;
+  border-radius: 10px;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.botao-secundario:hover {
+  text-decoration: underline;
+}
+
+.botao-secundario:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ====== RESPONSIVO ======
+   Até 900px vira 1 coluna (logo em cima, form embaixo) */
+@media (max-width: 900px) {
+  .pagina-login {
+    grid-template-columns: 1fr;
+  }
+
+  .coluna-esquerda {
+    padding-top: 42px;
+    padding-bottom: 22px;
+  }
+
+  .coluna-direita {
+    padding-top: 22px;
+    padding-bottom: 42px;
+  }
+}

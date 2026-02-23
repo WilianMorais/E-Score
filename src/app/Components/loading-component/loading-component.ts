@@ -11,7 +11,7 @@ export class CarregamentoComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      this.roteador.navigate(['/home']);
+      this.roteador.navigate(['/login']);
     }, 5000);
   }
 }

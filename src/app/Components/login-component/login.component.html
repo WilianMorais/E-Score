@@ -1,0 +1,77 @@
+<div class="pagina-login">
+  <!-- LADO ESQUERDO -->
+  <section class="coluna-esquerda">
+    <div class="marca">
+      <div class="logo">
+        <img src="assets/logo-escore.png" alt="Logo E-Score" />
+      </div>
+    </div>
+  </section>
+
+  <!-- LADO DIREITO -->
+  <section class="coluna-direita">
+    <div class="painel">
+      <form class="formulario" [formGroup]="formulario" (ngSubmit)="aoClicarEntrar()">
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input
+            id="email"
+            type="email"
+            inputmode="email"
+            autocomplete="email"
+            formControlName="email"
+            [class.invalido]="email.touched && email.invalid"
+          />
+          <small class="ajuda" *ngIf="email.touched && email.invalid">
+            Digite um e-mail válido.
+          </small>
+        </div>
+
+        <div class="campo">
+          <label for="senha">Senha</label>
+
+          <div class="senha-wrapper">
+            <input
+              id="senha"
+              [type]="mostrarSenha ? 'text' : 'password'"
+              autocomplete="current-password"
+              formControlName="senha"
+              [class.invalido]="senha.touched && senha.invalid"
+            />
+
+            <button
+              type="button"
+              class="botao-mostrar"
+              (click)="alternarVisibilidadeSenha()"
+              [attr.aria-label]="mostrarSenha ? 'Ocultar senha' : 'Mostrar senha'"
+            >
+              {{ mostrarSenha ? 'Ocultar' : 'Mostrar' }}
+            </button>
+          </div>
+
+          <small class="ajuda" *ngIf="senha.touched && senha.invalid">
+            Informe uma senha com pelo menos 6 caracteres.
+          </small>
+        </div>
+
+        <div class="linha-acoes">
+          <button type="button" class="link" (click)="aoClicarEsqueciMinhaSenha()">
+            Esqueci minha senha
+          </button>
+        </div>
+
+        <div class="alerta" *ngIf="mensagemErro">
+          {{ mensagemErro }}
+        </div>
+
+        <button class="botao-primario" type="submit" [disabled]="carregando">
+          {{ carregando ? 'ENTRANDO…' : 'ENTRAR' }}
+        </button>
+
+        <button class="botao-secundario" type="button" (click)="aoClicarContinuarSemLogin()" [disabled]="carregando">
+          CONTINUAR SEM LOGIN
+        </button>
+      </form>
+    </div>
+  </section>
+</div>
