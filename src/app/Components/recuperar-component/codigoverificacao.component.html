@@ -1,0 +1,52 @@
+<div class="pagina-recuperacao">
+  <section class="coluna-esquerda">
+    <div class="marca">
+      <div class="logo">
+        <img src="assets/logo-escore.png" alt="Logo E-Score" />
+      </div>
+    </div>
+  </section>
+
+  <section class="coluna-direita">
+    <div class="painel">
+      <div class="topo">
+        <div class="titulo">RECUPERAÇÃO DE SENHA</div>
+      </div>
+
+      <form class="formulario" [formGroup]="formulario" (ngSubmit)="aoClicarProximo()">
+        <div class="campo">
+          <label for="codigo">Código de Verificação:</label>
+          <input
+            id="codigo"
+            type="text"
+            inputmode="numeric"
+            autocomplete="one-time-code"
+            formControlName="codigo"
+            [class.invalido]="formulario.controls.codigo.touched && formulario.controls.codigo.invalid"
+          />
+          <small class="ajuda" *ngIf="formulario.controls.codigo.touched && formulario.controls.codigo.invalid">
+            Informe o código de verificação.
+          </small>
+        </div>
+
+        <div class="alerta" *ngIf="mensagemErro">
+          {{ mensagemErro }}
+        </div>
+
+        <div class="acoes">
+          <button class="botao-secundario pequeno" type="button" (click)="aoClicarVoltar()" [disabled]="carregando">
+            VOLTAR
+          </button>
+
+          <button class="botao-primario" type="submit" [disabled]="carregando">
+            {{ carregando ? 'PROCESSANDO…' : 'PRÓXIMO' }}
+          </button>
+        </div>
+
+        <button class="botao-secundario" type="button" (click)="aoClicarContinuarSemLogin()" [disabled]="carregando">
+          CONTINUAR SEM LOGIN
+        </button>
+      </form>
+    </div>
+  </section>
+</div>

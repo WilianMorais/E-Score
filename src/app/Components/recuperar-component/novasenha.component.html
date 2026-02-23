@@ -1,0 +1,72 @@
+<div class="pagina-recuperacao">
+  <section class="coluna-esquerda">
+    <div class="marca">
+      <div class="logo">
+        <img src="assets/logo-escore.png" alt="Logo E-Score" />
+      </div>
+    </div>
+  </section>
+
+  <section class="coluna-direita">
+    <div class="painel">
+      <div class="topo">
+        <div class="titulo">RECUPERAÇÃO DE SENHA</div>
+      </div>
+
+      <form class="formulario" [formGroup]="formulario" (ngSubmit)="aoClicarProximo()">
+        <div class="campo">
+          <label for="novaSenha">Informe a nova senha:</label>
+          <div class="senha-wrapper">
+            <input
+              id="novaSenha"
+              [type]="mostrarNovaSenha ? 'text' : 'password'"
+              autocomplete="new-password"
+              formControlName="novaSenha"
+              [class.invalido]="formulario.controls.novaSenha.touched && formulario.controls.novaSenha.invalid"
+            />
+            <button type="button" class="botao-mostrar" (click)="alternarMostrarNovaSenha()">
+              {{ mostrarNovaSenha ? 'Ocultar' : 'Mostrar' }}
+            </button>
+          </div>
+          <small class="ajuda" *ngIf="formulario.controls.novaSenha.touched && formulario.controls.novaSenha.invalid">
+            Informe uma senha com pelo menos 6 caracteres.
+          </small>
+        </div>
+
+        <div class="campo">
+          <label for="confirmarNovaSenha">Repita a nova senha:</label>
+          <div class="senha-wrapper">
+            <input
+              id="confirmarNovaSenha"
+              [type]="mostrarConfirmacao ? 'text' : 'password'"
+              autocomplete="new-password"
+              formControlName="confirmarNovaSenha"
+              [class.invalido]="formulario.controls.confirmarNovaSenha.touched && formulario.controls.confirmarNovaSenha.invalid"
+            />
+            <button type="button" class="botao-mostrar" (click)="alternarMostrarConfirmacao()">
+              {{ mostrarConfirmacao ? 'Ocultar' : 'Mostrar' }}
+            </button>
+          </div>
+        </div>
+
+        <div class="alerta" *ngIf="mensagemErro">
+          {{ mensagemErro }}
+        </div>
+
+        <div class="acoes">
+          <button class="botao-secundario pequeno" type="button" (click)="aoClicarVoltar()" [disabled]="carregando">
+            VOLTAR
+          </button>
+
+          <button class="botao-primario" type="submit" [disabled]="carregando">
+            {{ carregando ? 'PROCESSANDO…' : 'PRÓXIMO' }}
+          </button>
+        </div>
+
+        <button class="botao-secundario" type="button" (click)="aoClicarContinuarSemLogin()" [disabled]="carregando">
+          CONTINUAR SEM LOGIN
+        </button>
+      </form>
+    </div>
+  </section>
+</div>

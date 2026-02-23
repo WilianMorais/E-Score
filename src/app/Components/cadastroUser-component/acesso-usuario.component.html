@@ -1,0 +1,66 @@
+<div class="pagina-cadastro">
+  <section class="coluna-esquerda">
+    <div class="marca">
+      <div class="logo">
+        <img src="assets/logo-escore.png" alt="Logo E-Score" />
+      </div>
+      <div class="nome-marca">SCORE</div>
+    </div>
+  </section>
+
+  <section class="coluna-direita">
+    <div class="painel">
+      <div class="topo">
+        <div class="titulo">NOVO CADASTRO</div>
+      </div>
+
+      <form class="formulario" [formGroup]="formulario" (ngSubmit)="aoClicarFinalizarCadastro()">
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" inputmode="email" autocomplete="email" formControlName="email" />
+        </div>
+
+        <div class="linha-dupla">
+          <div class="campo">
+            <label for="regiao">Região</label>
+            <input id="regiao" type="text" formControlName="regiao" />
+          </div>
+
+          <div class="campo">
+            <label for="telefone">Número Telefone</label>
+            <input id="telefone" type="text" inputmode="numeric" formControlName="telefone" />
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="senha">Senha Para Acesso:</label>
+          <div class="senha-wrapper">
+            <input
+              id="senha"
+              [type]="mostrarSenha ? 'text' : 'password'"
+              autocomplete="new-password"
+              formControlName="senha"
+            />
+            <button type="button" class="botao-mostrar" (click)="alternarMostrarSenha()">
+              {{ mostrarSenha ? 'Ocultar' : 'Mostrar' }}
+            </button>
+          </div>
+        </div>
+
+        <div class="acoes">
+          <button class="botao-secundario pequeno" type="button" (click)="aoClicarVoltar()" [disabled]="carregando">
+            VOLTAR
+          </button>
+
+          <button class="botao-primario" type="submit" [disabled]="carregando">
+            {{ carregando ? 'PROCESSANDO…' : 'FINALIZAR CADASTRO' }}
+          </button>
+        </div>
+
+        <button class="botao-secundario" type="button" (click)="aoClicarContinuarSemLogin()" [disabled]="carregando">
+          CONTINUAR SEM LOGIN
+        </button>
+      </form>
+    </div>
+  </section>
+</div>

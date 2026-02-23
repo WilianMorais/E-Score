@@ -1,0 +1,77 @@
+<div class="pagina-cadastro">
+  <section class="coluna-esquerda">
+    <div class="marca">
+      <div class="logo">
+        <img src="assets/logo-escore.png" alt="Logo E-Score" />
+      </div>
+      <div class="nome-marca">SCORE</div>
+    </div>
+  </section>
+
+  <section class="coluna-direita">
+    <div class="painel">
+      <div class="topo">
+        <div class="titulo">NOVO CADASTRO</div>
+        <div class="subtitulo">
+          Bem-Vindo(a) a plataforma da e-score, para realizar o novo cadastro, preencha os dados a seguir:
+        </div>
+      </div>
+
+      <form class="formulario" [formGroup]="formulario" (ngSubmit)="aoClicarProximo()">
+        <div class="campo">
+          <label for="nome">Nome Completo:</label>
+          <input
+            id="nome"
+            type="text"
+            autocomplete="name"
+            formControlName="nomeCompleto"
+            [class.invalido]="formulario.controls.nomeCompleto.touched && formulario.controls.nomeCompleto.invalid"
+          />
+          <small class="ajuda" *ngIf="formulario.controls.nomeCompleto.touched && formulario.controls.nomeCompleto.invalid">
+            Informe seu nome completo.
+          </small>
+        </div>
+
+        <div class="campo">
+          <label for="cpf">CPF:</label>
+          <input
+            id="cpf"
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            formControlName="cpf"
+            [class.invalido]="formulario.controls.cpf.touched && formulario.controls.cpf.invalid"
+          />
+          <small class="ajuda" *ngIf="formulario.controls.cpf.touched && formulario.controls.cpf.invalid">
+            Informe um CPF válido.
+          </small>
+        </div>
+
+        <div class="campo campo-curto">
+          <label for="data">Data de Nascimento:</label>
+          <input
+            id="data"
+            type="date"
+            formControlName="dataNascimento"
+            [class.invalido]="formulario.controls.dataNascimento.touched && formulario.controls.dataNascimento.invalid"
+          />
+        </div>
+
+        <button type="button" class="link-termos">Termos de Responsabilidade</button>
+
+        <label class="checkbox">
+          <input type="checkbox" formControlName="aceitouTermos" />
+          <span>Declaro que li e aceito os termos</span>
+        </label>
+
+        <button class="botao-primario" type="submit" [disabled]="carregando">
+          {{ carregando ? 'PROCESSANDO…' : 'PROXIMO' }}
+        </button>
+
+        <button class="botao-secundario" type="button" (click)="aoClicarContinuarSemLogin()" [disabled]="carregando">
+          CONTINUAR SEM LOGIN
+        </button>
+      </form>
+    </div>
+  </section>
+</div>

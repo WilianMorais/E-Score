@@ -2,7 +2,7 @@
   display: block;
 }
 
-.pagina-login {
+.pagina-recuperacao {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -23,14 +23,12 @@
 }
 
 .logo {
-  margin-top: 0;   
   display: flex;
   justify-content: center;
-  justify-items: center;
 }
 
 .logo img {
-  width: 350px;         
+  width: clamp(180px, 22vw, 320px);
   height: auto;
 }
 
@@ -55,6 +53,24 @@
   width: min(520px, 92vw);
 }
 
+.topo {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.titulo {
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.98);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
 .formulario {
   display: flex;
   flex-direction: column;
@@ -64,7 +80,7 @@
 
 .campo label {
   display: block;
-  margin: 0 0 8px 6px;
+  margin: 0 0 8px 0;
   padding-left: 6px;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.95);
@@ -110,16 +126,17 @@ input.invalido {
 
 .botao-mostrar {
   position: absolute;
-  right: 10px;
+  right: 12px;
   top: 50%;
   transform: translateY(-50%);
   height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
   border: 0;
   background: transparent;
   color: rgba(0, 0, 0, 0.65);
   font-weight: 700;
   cursor: pointer;
-  padding: 6px 8px;
   border-radius: 8px;
 }
 
@@ -128,27 +145,7 @@ input.invalido {
   outline-offset: 2px;
 }
 
-/* Ações */
-.linha-acoes {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: -15px;
-  margin-bottom: 20px;
-}
-
-.link {
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 13px;
-  padding: 6px 0;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
+/* Alertas */
 .alerta {
   background: rgba(0, 0, 0, 0.18);
   color: #fff;
@@ -157,18 +154,7 @@ input.invalido {
   font-size: 13px;
 }
 
-.topo {
-  text-align: center;
-  margin-bottom: 18px;
-}
-
-.titulo {
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.98);
-  font-size: 30px;
-  letter-spacing: 1px;
-}
-
+/* Botões */
 .botao-primario {
   height: 44px;
   border-radius: 10px;
@@ -179,12 +165,6 @@ input.invalido {
   letter-spacing: 1px;
   cursor: pointer;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.20);
-}
-
-.bloco-secundario {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
 }
 
 .botao-primario:disabled {
@@ -212,10 +192,22 @@ input.invalido {
   cursor: not-allowed;
 }
 
-/* ====== RESPONSIVO ======
-   Até 900px vira 1 coluna (logo em cima, form embaixo) */
+/* Ações (VOLTAR + PRÓXIMO lado a lado) */
+.acoes {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.botao-secundario.pequeno {
+  height: 44px;
+  padding: 0 14px;
+  flex: 0 0 auto;
+}
+
+/* ====== RESPONSIVO ====== */
 @media (max-width: 900px) {
-  .pagina-login {
+  .pagina-recuperacao {
     grid-template-columns: 1fr;
   }
 
@@ -227,5 +219,14 @@ input.invalido {
   .coluna-direita {
     padding-top: 22px;
     padding-bottom: 42px;
+  }
+
+  .acoes {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .botao-secundario.pequeno {
+    width: 100%;
   }
 }

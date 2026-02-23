@@ -1,0 +1,212 @@
+:host { display: block; }
+
+.pagina-cadastro {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ====== ESQUERDA ====== */
+.coluna-esquerda {
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(16px, 3vw, 48px);
+}
+
+.marca { text-align: center; user-select: none; }
+
+.logo { display: flex; justify-content: center; }
+
+.logo img {
+  width: clamp(180px, 22vw, 320px);
+  height: auto;
+}
+
+.nome-marca {
+  margin-top: 14px;
+  font-size: clamp(44px, 5vw, 72px);
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #13d10a;
+  text-shadow: 0 10px 18px rgba(0,0,0,.25);
+}
+
+/* ====== DIREITA ====== */
+.coluna-direita {
+  background: #13d10a;
+  display: grid;
+  place-items: center;
+  padding: clamp(16px, 3vw, 48px);
+}
+
+.painel { width: min(520px, 92vw); }
+
+.topo { text-align: center; margin-bottom: 18px; }
+
+.titulo {
+  font-weight: 900;
+  color: rgba(255,255,255,.98);
+  font-size: 13px;
+  letter-spacing: .5px;
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  font-size: 12px;
+  color: rgba(255,255,255,.95);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 18px;
+}
+
+.campo label {
+  display: block;
+  margin: 0 0 8px 0;
+  padding-left: 6px;
+  font-size: 14px;
+  color: rgba(255,255,255,.95);
+}
+
+.campo-curto input {
+  width: min(220px, 100%);
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 44px;
+  border-radius: 8px;
+  border: 0;
+  outline: none;
+  padding: 0 14px;
+  font-size: 15px;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(0,0,0,.15);
+}
+
+input:focus {
+  box-shadow: 0 0 0 3px rgba(255,255,255,.35), 0 8px 18px rgba(0,0,0,.18);
+}
+
+input.invalido {
+  box-shadow: 0 0 0 3px rgba(255,60,60,.35), 0 8px 18px rgba(0,0,0,.18);
+}
+
+.ajuda {
+  display: block;
+  margin: 6px 0 0 0;
+  padding-left: 6px;
+  font-size: 12px;
+  color: rgba(255,255,255,.95);
+}
+
+/* Linha dupla (CEP/UF - Região/Telefone) */
+.linha-dupla {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+}
+
+.linha-dupla .campo:last-child input {
+  text-transform: uppercase;
+}
+
+/* Senha */
+.senha-wrapper { position: relative; }
+.senha-wrapper input { padding-right: 110px; }
+
+.botao-mostrar {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+  border: 0;
+  background: transparent;
+  color: rgba(0,0,0,.65);
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* Termos/Checkbox */
+.link-termos {
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 0 0 0 6px;
+  color: rgba(0,0,0,.55);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-left: 6px;
+  color: rgba(255,255,255,.95);
+  font-size: 13px;
+}
+
+.checkbox input {
+  width: 16px;
+  height: 16px;
+  box-shadow: none;
+}
+
+/* Botões */
+.botao-primario {
+  height: 44px;
+  border-radius: 10px;
+  border: 0;
+  background: #fff;
+  color: #0b7f06;
+  font-weight: 900;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(0,0,0,.20);
+}
+
+.botao-primario:disabled { opacity: .7; cursor: not-allowed; }
+
+.botao-secundario {
+  height: 44px;
+  border-radius: 10px;
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,.95);
+  font-weight: 900;
+  letter-spacing: .5px;
+  cursor: pointer;
+}
+
+.botao-secundario:hover { text-decoration: underline; }
+
+.acoes {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.botao-secundario.pequeno {
+  height: 44px;
+  padding: 0 14px;
+  flex: 0 0 auto;
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 900px) {
+  .pagina-cadastro { grid-template-columns: 1fr; }
+  .acoes { flex-direction: column; align-items: stretch; }
+  .botao-secundario.pequeno { width: 100%; }
+  .linha-dupla { grid-template-columns: 1fr; }
+}

@@ -55,8 +55,12 @@ export class TelaLoginComponent {
 
   aoClicarEsqueciMinhaSenha(): void {
     setTimeout(() => {
-      this.rota.navigate(['/recuperacao']);
+      this.rota.navigate(['/recuperacao/email']);
     },);
+  }
+
+  aoClicarNovoCadastro(): void {
+    this.rota.navigate(['/cadastro/info']);
   }
 
   aoClicarContinuarSemLogin(): void {

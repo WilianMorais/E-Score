@@ -1,0 +1,56 @@
+<div class="pagina-cadastro">
+  <section class="coluna-esquerda">
+    <div class="marca">
+      <div class="logo">
+        <img src="assets/logo-escore.png" alt="Logo E-Score" />
+      </div>
+      <div class="nome-marca">SCORE</div>
+    </div>
+  </section>
+
+  <section class="coluna-direita">
+    <div class="painel">
+      <div class="topo">
+        <div class="titulo">NOVO CADASTRO</div>
+      </div>
+
+      <form class="formulario" [formGroup]="formulario" (ngSubmit)="aoClicarProximo()">
+        <div class="campo">
+          <label for="endereco">Endereço:</label>
+          <input id="endereco" type="text" formControlName="endereco" />
+        </div>
+
+        <div class="linha-dupla">
+          <div class="campo">
+            <label for="cep">C.E.P</label>
+            <input id="cep" type="text" inputmode="numeric" formControlName="cep" />
+          </div>
+
+          <div class="campo">
+            <label for="uf">UF:</label>
+            <input id="uf" type="text" maxlength="2" formControlName="uf" />
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="municipio">Município:</label>
+          <input id="municipio" type="text" formControlName="municipio" />
+        </div>
+
+        <div class="acoes">
+          <button class="botao-secundario pequeno" type="button" (click)="aoClicarVoltar()" [disabled]="carregando">
+            VOLTAR
+          </button>
+
+          <button class="botao-primario" type="submit" [disabled]="carregando">
+            {{ carregando ? 'PROCESSANDO…' : 'PROXIMO' }}
+          </button>
+        </div>
+
+        <button class="botao-secundario" type="button" (click)="aoClicarContinuarSemLogin()" [disabled]="carregando">
+          CONTINUAR SEM LOGIN
+        </button>
+      </form>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,49 @@
+<div class="pagina-recuperacao">
+  <section class="coluna-esquerda">
+    <div class="marca">
+      <div class="logo">
+        <img src="assets/logo-escore.png" alt="Logo E-Score" />
+      </div>
+    </div>
+  </section>
+
+  <section class="coluna-direita">
+    <div class="painel">
+      <div class="topo">
+        <div class="titulo">RECUPERAÇÃO DE SENHA</div>
+        <div class="subtitulo">
+          Será enviado ao seu e-mail um código de verificação de único
+        </div>
+      </div>
+
+      <form class="formulario" [formGroup]="formulario" (ngSubmit)="aoClicarProximo()">
+        <div class="campo">
+          <label for="email">Informe o e-mail cadastrado:</label>
+          <input
+            id="email"
+            type="email"
+            inputmode="email"
+            autocomplete="email"
+            formControlName="email"
+            [class.invalido]="formulario.controls.email.touched && formulario.controls.email.invalid"
+          />
+          <small class="ajuda" *ngIf="formulario.controls.email.touched && formulario.controls.email.invalid">
+            Digite um e-mail válido.
+          </small>
+        </div>
+
+        <div class="alerta" *ngIf="mensagemErro">
+          {{ mensagemErro }}
+        </div>
+
+        <button class="botao-primario" type="submit" [disabled]="carregando">
+          {{ carregando ? 'PROCESSANDO…' : 'PRÓXIMO' }}
+        </button>
+
+        <button class="botao-secundario" type="button" (click)="aoClicarContinuarSemLogin()" [disabled]="carregando">
+          CONTINUAR SEM LOGIN
+        </button>
+      </form>
+    </div>
+  </section>
+</div>

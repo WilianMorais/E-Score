@@ -1,5 +1,4 @@
 <div class="pagina-login">
-  <!-- LADO ESQUERDO -->
   <section class="coluna-esquerda">
     <div class="marca">
       <div class="logo">
@@ -8,9 +7,11 @@
     </div>
   </section>
 
-  <!-- LADO DIREITO -->
   <section class="coluna-direita">
     <div class="painel">
+      <div class="topo">
+        <div class="titulo">ÁEREA DE LOGIN</div>
+      </div>
       <form class="formulario" [formGroup]="formulario" (ngSubmit)="aoClicarEntrar()">
         <div class="campo">
           <label for="email">E-mail</label>
@@ -68,9 +69,15 @@
           {{ carregando ? 'ENTRANDO…' : 'ENTRAR' }}
         </button>
 
-        <button class="botao-secundario" type="button" (click)="aoClicarContinuarSemLogin()" [disabled]="carregando">
-          CONTINUAR SEM LOGIN
-        </button>
+        <div class="bloco-secundario">
+          <button class="botao-secundario" type="button" (click)="aoClicarNovoCadastro()" [disabled]="carregando">
+             NOVO CADASTRO
+          </button>
+        
+          <button class="botao-secundario" type="button" (click)="aoClicarContinuarSemLogin()" [disabled]="carregando">
+            CONTINUAR SEM LOGIN
+          </button>
+        </div>
       </form>
     </div>
   </section>
