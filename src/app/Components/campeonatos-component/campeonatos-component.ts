@@ -133,6 +133,7 @@ export class CampeonatosComponent {
     { nome: 'Premiership League',                 slug: 'escocia',         logoCampeonato: 'assets/campeonatos/escocia/premiership-logo.png',            ligaFavorita: false,      regiao: 'Europa'  },
     { nome: 'La Liga',                            slug: 'espanhol1',       logoCampeonato: 'assets/campeonatos/espanha/laliga-logo.png',                 ligaFavorita: false,      regiao: 'Europa'  },
     { nome: 'La Liga Hypermotion',                slug: 'espanhol2',       logoCampeonato: 'assets/campeonatos/espanha/laliga2-logo.png',                ligaFavorita: false,      regiao: 'Europa'  },
+    { nome: 'Major League Soccer - MLS - Classificação Geral',slug:'mlsg', logoCampeonato: 'assets/campeonatos/eua/mls-logo.png',                        ligaFavorita: false,      regiao: 'América do Norte'  },
     { nome: 'Major League Soccer - MLS - Conferência Oeste',slug: 'mlso',  logoCampeonato: 'assets/campeonatos/eua/mls-logo.png',                        ligaFavorita: false,      regiao: 'América do Norte'  },
     { nome: 'Major League Soccer - MLS - Conferência Leste',slug: 'mlsl',  logoCampeonato: 'assets/campeonatos/eua/mls-logo.png',                        ligaFavorita: false,      regiao: 'América do Norte'  },
     { nome: 'USL Championship - Conferência Leste',slug: 'usll',           logoCampeonato: 'assets/campeonatos/eua/usl-logo.png',                        ligaFavorita: false,      regiao: 'América do Norte'  },

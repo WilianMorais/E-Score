@@ -498,6 +498,13 @@ export class PaisComponent {
       bandeira: 'assets/eua-band.png',
       ligas: [
         {
+          nome: 'Major League Soccer - MLS - Classificação Geral',
+          temporada: '2024/25',
+          logo: 'assets/campeonatos/eua/mls-logo.png',
+          favorito: false,
+          tipo: 'liga',
+        },
+        {
           nome: 'Major League Soccer - MLS - Conferência Leste',
           temporada: '2024/25',
           logo: 'assets/campeonatos/eua/mls-logo.png',
@@ -1090,6 +1097,7 @@ export class PaisComponent {
       'La Liga Hypermotion': 'espanhol2',
     },
     'estados-unidos': {
+      'Major League Soccer - MLS - Classificação Geral': 'mlsg',
       'Major League Soccer - MLS - Conferência Oeste': 'mlso',
       'Major League Soccer - MLS - Conferência Leste': 'mlsl',
       'USL Championship - Conferência Oeste': 'uslo',

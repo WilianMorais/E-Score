@@ -15,12 +15,18 @@
   padding: clamp(16px, 3vw, 48px);
 }
 
-.marca { text-align: center; user-select: none; }
+.marca { 
+  text-align: center; 
+  user-select: none; 
+}
 
-.logo { display: flex; justify-content: center; }
+.logo { 
+  display: flex; 
+  justify-content: center; 
+}
 
 .logo img {
-  width: clamp(180px, 22vw, 320px);
+  width: 350px; 
   height: auto;
 }
 

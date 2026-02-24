@@ -31,6 +31,20 @@
       </div>
     </div>
 
+    <div class="dados-liga">
+      <div class="equipe"><h3>EQUIPE</h3></div>
+      <div class="pontos"><h3>PONTOS</h3></div>
+      <div class="jogos"><h3>PJ</h3></div>
+      <div class="ganhou"><h3>VIT</h3></div>
+      <div class="empatou"><h3>EMP</h3></div>
+      <div class="perdeu"><h3>DER</h3></div>
+      <div class="golPro"><h3>GF</h3></div>
+      <div class="golContra"><h3>GC</h3></div>
+      <div class="gols"><h3>SG</h3></div>
+      <div class="proximo"><h3>PRÓXIMO JOGO</h3></div>
+      <div class="historico"><h3>HISTÓRICO CAMPEONATO</h3></div>
+    </div>
+
     <div class="conteudo-campeonato" *ngIf="ligaSlug">
       <div *ngIf="equipesFiltradas.length; else semEquipes">
         <div class="card-equipe" *ngFor="let equipe of equipesFiltradas">

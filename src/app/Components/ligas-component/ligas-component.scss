@@ -188,6 +188,7 @@ $cor-borda: #dddddd;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding-top: 0;
 }
 
 .titulo-campeonato {
@@ -205,9 +206,68 @@ $cor-borda: #dddddd;
   border-radius: 10px;
   border: 1px solid $cor-borda;
   background: $cor-fundo-cinza;
-  margin-bottom: 6px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 0px 15px 6px 30px;
+  max-width: 250px;
+}
+
+.dados-liga {
+  font-size: 15px;
+  color: #00b934;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  position: sticky;
+  box-sizing: border-box;
+  height: 110px;
+  top: 10px;
+  z-index: 10;
+  border-bottom: 1px solid $cor-borda;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.10);
+
+  .equipe {
+    margin-left: 115px;
+  }
+
+  .pontos {
+    margin-left: 150px;
+  }
+
+  .jogos{
+    margin-left: 30px;
+  }
+
+  .ganhou {
+    margin-left: 30px;
+  }
+
+  .empatou {
+    margin-left: 30px;
+  }
+
+  .perdeu {
+    margin-left: 30px;
+  }
+
+  .golPro {
+    margin-left: 30px;
+  }
+
+  .golContra {
+    margin-left: 30px;
+  }
+
+  .gols {
+    margin-left: 30px;
+  }
+
+  .proximo {
+    margin-left: 40px;
+  }
+
+  .historico {
+    margin-left: 300px;
+  }
 }
 
 .card-equipe-escudo img {
