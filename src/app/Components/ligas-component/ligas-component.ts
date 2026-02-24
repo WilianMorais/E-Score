@@ -129,7 +129,6 @@ export class LigasComponent implements OnInit {
     { nome:'RB Bragantino',         slug:'rbb',    escudo:'assets/campeonatos/brasil/equipes/bragantino.png',  equipeFav:false,  campeonato:'brasileiraoA' },
     { nome:'Corinthians',           slug:'cor',    escudo:'assets/campeonatos/brasil/equipes/corinthians.png', equipeFav:false,  campeonato:'brasileiraoA' },
     { nome:'Atlético Mineiro',      slug:'cam',    escudo:'assets/campeonatos/brasil/equipes/atlmin.png',      equipeFav:false,  campeonato:'brasileiraoA' },
-    { nome:'Fortaleza',             slug:'for',    escudo:'assets/campeonatos/brasil/equipes/fortaleza.png',   equipeFav:false,  campeonato:'brasileiraoA' },
     { nome:'Vasco',                 slug:'crv',    escudo:'assets/campeonatos/brasil/equipes/vasco.png',       equipeFav:false,  campeonato:'brasileiraoA' },
     { nome:'Vitória',               slug:'vit',    escudo:'assets/campeonatos/brasil/equipes/vitoria.png',     equipeFav:false,  campeonato:'brasileiraoA' },
     { nome:'Coritiba',              slug:'cfc',    escudo:'assets/campeonatos/brasil/equipes/coxa.png',        equipeFav:false,  campeonato:'brasileiraoA' },

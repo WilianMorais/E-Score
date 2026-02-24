@@ -145,8 +145,8 @@ $cor-borda: #dddddd;
   margin-bottom: 20px;
   flex-shrink: 0;
   position: sticky;
-  top: 0;              
-  z-index: 5;         
+  top: 0;
+  z-index: 5;
   background: #ffffff;
   padding: 24px 24px 30px;
 }
@@ -185,9 +185,6 @@ $cor-borda: #dddddd;
 
 .conteudo-campeonato {
   margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
   padding-top: 0;
 }
 
@@ -206,8 +203,9 @@ $cor-borda: #dddddd;
   border-radius: 10px;
   border: 1px solid $cor-borda;
   background: $cor-fundo-cinza;
-  margin: 0px 15px 6px 30px;
-  max-width: 250px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .dados-liga {
@@ -234,40 +232,54 @@ $cor-borda: #dddddd;
   }
 
   .jogos{
-    margin-left: 30px;
+    margin-left: 50px;
   }
 
   .ganhou {
-    margin-left: 30px;
+    margin-left: 50px;
   }
 
   .empatou {
-    margin-left: 30px;
+    margin-left: 50px;
   }
 
   .perdeu {
-    margin-left: 30px;
+    margin-left: 50px;
   }
 
   .golPro {
-    margin-left: 30px;
+    margin-left: 50px;
   }
 
   .golContra {
-    margin-left: 30px;
+    margin-left: 50px;
   }
 
   .gols {
-    margin-left: 30px;
+    margin-left: 50px;
   }
 
   .proximo {
-    margin-left: 40px;
+    margin-left: 50px;
   }
 
   .historico {
-    margin-left: 300px;
+    margin-left: 200px;
   }
+}
+
+.posicao{
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.posicao h3{
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color:#00b934;
 }
 
 .card-equipe-escudo img {
@@ -291,6 +303,59 @@ $cor-borda: #dddddd;
   margin-top: 4px;
 }
 
+.conteudo-campeonato > div {
+  display: grid;
+  grid-template-columns: 300px 1fr 420px;
+  gap: 20px;
+  align-items: start;
+}
+
+.coluna-esquerda,
+.coluna-central {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-equipe,
+.coluna-central .stat {
+  height: 44px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+}
+
+.coluna-central .stat{
+  display: grid;
+  grid-template-columns: 70px 50px 50px 50px 50px 50px 50px 50px 150px;
+  column-gap: 10px;
+  align-items: center;
+
+  border-radius: 10px;
+  border: 1px solid $cor-borda;
+  background: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}
+
+.coluna-central .stat .proximo {
+  text-align: left;
+}
+
+.coluna-direita{
+  position: sticky;
+  top: 150px;
+}
+
+.painel-historico{
+  height: 650px;
+  border: 1px solid $cor-borda;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
 @media (max-width: 768px) {
   .barra-filtro-equipes {
     flex-direction: column;
@@ -302,5 +367,17 @@ $cor-borda: #dddddd;
   .campo-pesquisa-equipes {
     margin: 0;
     width: 100%;
+  }
+
+  .conteudo-campeonato > div {
+    grid-template-columns: 1fr;
+  }
+
+  .coluna-direita{
+    position: static;
+  }
+
+  .painel-historico{
+    height: 350px;
   }
 }
