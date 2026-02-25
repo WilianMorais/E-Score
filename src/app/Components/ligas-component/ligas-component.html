@@ -47,26 +47,31 @@
 
     <div class="conteudo-campeonato" *ngIf="ligaSlug">
       <div *ngIf="equipesFiltradas.length; else semEquipes">
-
-        <div class="coluna-esquerda">
-          <div class="card-equipe" *ngFor="let equipe of equipesFiltradas; let i = index">
-            <div class="posicao"><h3>{{ i + 1 }}°</h3></div>
-            <div class="card-equipe-escudo">
-              <img [src]="equipe.escudo" [alt]="equipe.nome" />
-            </div>
-            <div class="card-equipe-info">
-              <span class="card-equipe-nome">{{ equipe.nome }}</span>
+          <div class="coluna-esquerda">
+            <div class="card-equipe" *ngFor="let equipe of equipesFiltradas; let i = index">
+              <div class="posicao"><h3>{{ i + 1 }}°</h3></div>
+              <div class="card-equipe-escudo">
+                <img [src]="equipe.escudo" [alt]="equipe.nome" />
+              </div>
+              <div class="card-equipe-info">
+                <span class="card-equipe-nome">{{ equipe.nome }}</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="coluna-central">
-          <div class="stat" *ngFor="let equipe of equipesFiltradas">
-            <div>-</div><div>-</div><div>-</div><div>-</div><div>-</div>
-            <div>-</div><div>-</div><div>-</div><div>-</div>
+          <div class="coluna-central">
+            <div class="stat" *ngFor="let equipe of equipesFiltradas">
+              <div class="pontosLista">-</div>
+              <div class="jogosLista">-</div>
+              <div class="ganhouLista">-</div>
+              <div class="empatouLista">-</div>
+              <div class="perdeuLista">-</div>
+              <div class="golProLista">-</div>
+              <div class="golContraLista">-</div>
+              <div class="golsLista">-</div>
+              <div class="proximoLista">-</div>
+            </div>
           </div>
-        </div>
-
         <div class="coluna-direita">
           <div class="painel-historico">
             <!-- aqui vai ficar fixo com dados históricos -->

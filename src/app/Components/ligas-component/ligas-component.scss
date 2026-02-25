@@ -209,26 +209,23 @@ $cor-borda: #dddddd;
 }
 
 .dados-liga {
-  font-size: 15px;
+  font-size: 10px;
   color: #00b934;
   background-color: #ffffff;
   display: flex;
   align-items: center;
   padding: 8px 15px;
   position: sticky;
-  box-sizing: border-box;
   height: 110px;
-  top: 10px;
+  top: 20px;
   z-index: 10;
-  border-bottom: 1px solid $cor-borda;
-  box-shadow: 0 2px 0 rgba(0,0,0,0.10);
 
   .equipe {
     margin-left: 115px;
   }
 
   .pontos {
-    margin-left: 150px;
+    margin-left: 180px;
   }
 
   .jogos{
@@ -260,12 +257,13 @@ $cor-borda: #dddddd;
   }
 
   .proximo {
-    margin-left: 50px;
+    margin-left: 65px;
   }
 
   .historico {
-    margin-left: 200px;
+    margin-left: 235px;
   }
+
 }
 
 .posicao{
@@ -315,6 +313,42 @@ $cor-borda: #dddddd;
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  .pontosLista {
+    margin-left: 15px;
+  }
+
+  .jogosLista {
+    margin-left: 28px;
+  }
+
+  .ganhouLista {
+    margin-left: 45px;
+  }
+
+  .empatouLista {
+    margin-left: 54px;
+  }
+
+  .perdeuLista {
+    margin-left: 70px;
+  }
+
+  .golProLista {
+    margin-left: 79px;
+  }
+
+  .golContraLista {
+    margin-left: 83px;
+  }
+
+  .golsLista {
+    margin-left: 88px;
+  }
+
+  .proximoLista {
+    margin-left: 140px;
+  }
 }
 
 .card-equipe,
@@ -345,12 +379,12 @@ $cor-borda: #dddddd;
 }
 
 .coluna-direita{
-  position: sticky;
-  top: 150px;
+  position: flex;
+  margin-top: 1px;
 }
 
 .painel-historico{
-  height: 650px;
+  height: 406px;
   border: 1px solid $cor-borda;
   border-radius: 10px;
   background: #ffffff;
@@ -373,11 +407,42 @@ $cor-borda: #dddddd;
     grid-template-columns: 1fr;
   }
 
-  .coluna-direita{
+  .coluna-direita {
     position: static;
   }
 
-  .painel-historico{
+  .painel-historico {
     height: 350px;
+  }
+
+  .barra-superior {
+    padding: 8px 10px;
+  }
+
+  .btn-voltar-topo {
+    font-size: 18px;
+  }
+
+  .titulo-campeonato {
+    font-size: 24px;
+  }
+
+  .card-equipe {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .circulo-centro {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .campo-pesquisa-equipes input {
+    font-size: 12px;
+  }
+
+  .item-inferior {
+    font-size: 12px;
   }
 }
