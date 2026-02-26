@@ -73,7 +73,6 @@ $cor-borda: #dddddd;
   flex: 1;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
   min-height: 0;
   padding: 0 24px 80px;
   background: #ffffff;
@@ -388,6 +387,16 @@ $cor-borda: #dddddd;
   border: 1px solid $cor-borda;
   border-radius: 10px;
   background: #ffffff;
+}
+
+.juncaoTela {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+  max-height: calc(100vh - 300px); 
+  overflow-y: auto;
+  min-height: 0;
 }
 
 @media (max-width: 768px) {

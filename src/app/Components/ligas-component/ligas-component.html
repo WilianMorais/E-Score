@@ -47,6 +47,8 @@
 
     <div class="conteudo-campeonato" *ngIf="ligaSlug">
       <div *ngIf="equipesFiltradas.length; else semEquipes">
+        
+        <div class="juncaoTela">
           <div class="coluna-esquerda">
             <div class="card-equipe" *ngFor="let equipe of equipesFiltradas; let i = index">
               <div class="posicao"><h3>{{ i + 1 }}°</h3></div>
@@ -58,7 +60,6 @@
               </div>
             </div>
           </div>
-
           <div class="coluna-central">
             <div class="stat" *ngFor="let equipe of equipesFiltradas">
               <div class="pontosLista">-</div>
@@ -72,6 +73,8 @@
               <div class="proximoLista">-</div>
             </div>
           </div>
+        </div>
+
         <div class="coluna-direita">
           <div class="painel-historico">
             <!-- aqui vai ficar fixo com dados históricos -->
